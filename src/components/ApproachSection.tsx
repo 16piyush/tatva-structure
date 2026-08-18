@@ -21,18 +21,18 @@ export default function ApproachSection() {
   };
 
   return (
-    <section className="py-20 lg:py-24 bg-[#0B1320] relative border-t border-slate-800/80">
+    <section className="py-12 sm:py-16 lg:py-24 bg-[#0F141E] relative border-t border-white/10">
       <div className="absolute inset-0 blueprint-grid opacity-20 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-900 border border-[#E06D14]/40 text-[#E06D14] text-xs font-mono-tech uppercase tracking-wider">
-            <span className="w-2 h-2 rounded-full bg-[#E06D14]" />
+        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-sm bg-[#161C27] border border-[#F27D26]/40 text-[#F27D26] text-xs font-mono-tech uppercase tracking-wider">
+            <span className="w-2 h-2 rounded-full bg-[#F27D26]" />
             <span>METHODOLOGY & EXECUTION</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-heading tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-heading tracking-tight uppercase">
             OUR APPROACH
           </h2>
           <p className="text-base text-slate-400">

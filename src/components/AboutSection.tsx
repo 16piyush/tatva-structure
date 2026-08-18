@@ -48,7 +48,7 @@ export default function AboutSection({ onOpenInquiry, onOpenBlueprintModal }: Ab
   ];
 
   return (
-    <section id="about" className="py-20 lg:py-28 bg-[#0F141E] relative border-t border-white/10">
+    <section id="about" className="py-12 sm:py-16 lg:py-24 bg-[#0F141E] relative border-t border-white/10">
       {/* Background blueprint subtle texture */}
       <div className="absolute inset-0 blueprint-grid opacity-30 pointer-events-none" />
 

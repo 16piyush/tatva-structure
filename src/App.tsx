@@ -41,7 +41,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#070D18] text-slate-100 font-sans selection:bg-[#E06D14] selection:text-white">
+    <div className="min-h-screen bg-[#0F141E] text-slate-100 font-sans selection:bg-[#F27D26] selection:text-white">
       {/* Top Navbar */}
       <Navbar 
         onOpenInquiry={() => handleOpenInquiry('General Structural Consultation')} 

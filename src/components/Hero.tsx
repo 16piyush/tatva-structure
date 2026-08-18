@@ -49,7 +49,7 @@ export default function Hero({ onExploreExpertise, onViewProjects, onOpenInquiry
   return (
     <section 
       id="home" 
-      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#0F141E] pt-8 pb-16 lg:py-20"
+      className="relative overflow-hidden bg-[#0F141E] pt-6 pb-10 sm:pt-10 sm:pb-16 lg:py-20 lg:min-h-[85vh] lg:flex lg:items-center lg:justify-center"
     >
       {/* Background Visual Layer with Blueprint Grid & Dark Theme */}
       <div className="absolute inset-0 z-0">
@@ -71,94 +71,94 @@ export default function Hero({ onExploreExpertise, onViewProjects, onOpenInquiry
 
       {/* Hero Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Column: Core Value Proposition */}
-          <div className="lg:col-span-8 space-y-6 text-left">
+          <div className="lg:col-span-8 space-y-4 sm:space-y-6 text-left">
             
             {/* Tagline Line & Label */}
-            <div className="flex items-center gap-4 mb-2">
-              <div className="w-12 h-px bg-[#F27D26]"></div>
-              <span className="text-[#F27D26] uppercase tracking-[0.3em] font-bold text-xs">
+            <div className="flex items-center gap-3 sm:gap-4 mb-1">
+              <div className="w-8 sm:w-12 h-px bg-[#F27D26]"></div>
+              <span className="text-[#F27D26] uppercase tracking-[0.25em] font-bold text-[11px] sm:text-xs">
                 Structural Design Consultancy
               </span>
             </div>
 
             {/* Massive Bold Headline with Stroke Effect */}
-            <div className="space-y-3">
-              <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[92px] font-black leading-[0.88] tracking-tighter uppercase text-white font-heading">
+            <div className="space-y-2 sm:space-y-3">
+              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[88px] font-black leading-[0.95] sm:leading-[0.88] tracking-tighter uppercase text-white font-heading">
                 YOU THINK<br/>
                 <span className="text-transparent" style={{ WebkitTextStroke: '1.5px #F27D26' }}>
                   WE MAKE
                 </span>
               </h1>
               
-              <h2 className="text-lg sm:text-xl md:text-2xl font-bold uppercase tracking-wide text-slate-300 font-heading">
+              <h2 className="text-base sm:text-xl md:text-2xl font-bold uppercase tracking-wide text-slate-300 font-heading">
                 {COMPANY_INFO.subtitle}
               </h2>
             </div>
 
             {/* Supporting Text */}
-            <p className="text-base sm:text-lg text-slate-400 max-w-2xl leading-relaxed">
+            <p className="text-sm sm:text-base lg:text-lg text-slate-400 max-w-2xl leading-relaxed">
               {COMPANY_INFO.taglineDesc}
             </p>
 
             {/* Metric Stat Boxes from Theme */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-              <div className="px-5 py-3.5 bg-[#161C27] border border-white/10 flex flex-col justify-center rounded-sm shadow-sm">
-                <span className="text-[#F27D26] font-bold text-2xl sm:text-3xl font-heading">12+</span>
-                <span className="text-[10px] uppercase tracking-wider text-slate-400 font-mono-tech">Years Expertise</span>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-1 sm:pt-2">
+              <div className="px-3 sm:px-5 py-2.5 sm:py-3.5 bg-[#161C27] border border-white/10 flex flex-col justify-center rounded-sm shadow-sm">
+                <span className="text-[#F27D26] font-bold text-xl sm:text-3xl font-heading">12+</span>
+                <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-slate-400 font-mono-tech">Years Expertise</span>
               </div>
-              <div className="px-5 py-3.5 bg-[#161C27] border border-white/10 flex flex-col justify-center rounded-sm shadow-sm">
-                <span className="text-white font-bold text-2xl sm:text-3xl font-heading">215 <span className="text-xs font-mono-tech text-[#F27D26]">MLD</span></span>
-                <span className="text-[10px] uppercase tracking-wider text-slate-400 font-mono-tech">STP Assets</span>
+              <div className="px-3 sm:px-5 py-2.5 sm:py-3.5 bg-[#161C27] border border-white/10 flex flex-col justify-center rounded-sm shadow-sm">
+                <span className="text-white font-bold text-xl sm:text-3xl font-heading">215 <span className="text-[10px] sm:text-xs font-mono-tech text-[#F27D26]">MLD</span></span>
+                <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-slate-400 font-mono-tech">STP Assets</span>
               </div>
-              <div className="px-5 py-3.5 bg-[#161C27] border border-white/10 flex flex-col justify-center rounded-sm shadow-sm">
-                <span className="text-white font-bold text-2xl sm:text-3xl font-heading">100K <span className="text-xs font-mono-tech text-[#F27D26]">SQFT</span></span>
-                <span className="text-[10px] uppercase tracking-wider text-slate-400 font-mono-tech">PEB Sheds</span>
+              <div className="px-3 sm:px-5 py-2.5 sm:py-3.5 bg-[#161C27] border border-white/10 flex flex-col justify-center rounded-sm shadow-sm">
+                <span className="text-white font-bold text-xl sm:text-3xl font-heading">100K <span className="text-[10px] sm:text-xs font-mono-tech text-[#F27D26]">SQFT</span></span>
+                <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-slate-400 font-mono-tech">PEB Sheds</span>
               </div>
-              <div className="px-5 py-3.5 bg-[#161C27] border border-white/10 flex flex-col justify-center rounded-sm shadow-sm">
-                <span className="text-[#F27D26] font-bold text-2xl sm:text-3xl font-heading">GLOBAL</span>
-                <span className="text-[10px] uppercase tracking-wider text-slate-400 font-mono-tech">Design Codes</span>
+              <div className="px-3 sm:px-5 py-2.5 sm:py-3.5 bg-[#161C27] border border-white/10 flex flex-col justify-center rounded-sm shadow-sm">
+                <span className="text-[#F27D26] font-bold text-xl sm:text-3xl font-heading">GLOBAL</span>
+                <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-slate-400 font-mono-tech">Design Codes</span>
               </div>
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap gap-3 pt-2">
+            <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2.5 sm:gap-3 pt-2">
               <button
                 onClick={handleExplore}
-                className="inline-flex items-center justify-center px-7 py-3.5 rounded-sm font-bold text-xs sm:text-sm uppercase tracking-wider bg-[#F27D26] text-white hover:bg-[#ff8c38] shadow-lg shadow-[#F27D26]/20 transition-all duration-200 cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-4 sm:px-7 py-3 sm:py-3.5 rounded-sm font-bold text-xs sm:text-sm uppercase tracking-wider bg-[#F27D26] text-white hover:bg-[#ff8c38] shadow-lg shadow-[#F27D26]/20 transition-all duration-200 cursor-pointer"
                 id="hero-btn-explore"
               >
-                <span>EXPLORE EXPERTISE</span>
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <span>EXPLORE</span>
+                <ArrowRight className="w-4 h-4 ml-1.5 hidden sm:inline" />
               </button>
 
               <button
                 onClick={handleProjects}
-                className="inline-flex items-center justify-center px-6 py-3.5 rounded-sm font-bold text-xs sm:text-sm uppercase tracking-wider bg-[#161C27] text-slate-200 hover:text-white border border-white/10 hover:border-white/30 transition-all duration-200 cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-3 sm:px-6 py-3 sm:py-3.5 rounded-sm font-bold text-xs sm:text-sm uppercase tracking-wider bg-[#161C27] text-slate-200 hover:text-white border border-white/10 hover:border-white/30 transition-all duration-200 cursor-pointer"
                 id="hero-btn-projects"
               >
-                <Layers className="w-4 h-4 mr-2 text-[#F27D26]" />
-                <span>PROJECTS PORTFOLIO</span>
+                <Layers className="w-3.5 h-3.5 mr-1.5 text-[#F27D26]" />
+                <span>PORTFOLIO</span>
               </button>
 
               {onOpenBlueprint && (
                 <button
                   onClick={onOpenBlueprint}
-                  className="inline-flex items-center justify-center px-5 py-3.5 rounded-sm font-bold text-xs sm:text-sm uppercase tracking-wider bg-white/5 text-slate-300 hover:text-white hover:bg-white/10 border border-white/10 transition-colors cursor-pointer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-3 sm:px-5 py-3 sm:py-3.5 rounded-sm font-bold text-xs sm:text-sm uppercase tracking-wider bg-white/5 text-slate-300 hover:text-white hover:bg-white/10 border border-white/10 transition-colors cursor-pointer"
                 >
-                  <Cpu className="w-4 h-4 mr-2 text-[#F27D26]" />
-                  <span>BLUEPRINT VIEWER</span>
+                  <Cpu className="w-3.5 h-3.5 mr-1.5 text-[#F27D26]" />
+                  <span>BLUEPRINTS</span>
                 </button>
               )}
 
               <button
                 onClick={onOpenInquiry}
-                className="inline-flex items-center justify-center px-5 py-3.5 rounded-sm font-bold text-xs sm:text-sm uppercase tracking-wider text-[#F27D26] hover:text-white hover:bg-[#F27D26]/10 border border-[#F27D26]/30 transition-colors cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-3 sm:px-5 py-3 sm:py-3.5 rounded-sm font-bold text-xs sm:text-sm uppercase tracking-wider text-[#F27D26] hover:text-white hover:bg-[#F27D26]/10 border border-[#F27D26]/30 transition-colors cursor-pointer"
               >
                 <span>INQUIRE NOW</span>
-                <ExternalLink className="w-3.5 h-3.5 ml-1.5 opacity-80" />
+                <ExternalLink className="w-3.5 h-3.5 ml-1 opacity-80" />
               </button>
             </div>
           </div>
@@ -275,9 +275,9 @@ export default function Hero({ onExploreExpertise, onViewProjects, onOpenInquiry
         </div>
       </div>
 
-      {/* Bottom subtle scroll cue */}
-      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex flex-col items-center opacity-60 hover:opacity-100 transition-opacity">
-        <a href="#about" className="text-slate-400 hover:text-white transition-colors" aria-label="Scroll Down">
+      {/* Bottom subtle scroll cue on desktop */}
+      <div className="hidden lg:flex absolute bottom-3 left-1/2 transform -translate-x-1/2 flex-col items-center opacity-60 hover:opacity-100 transition-opacity pointer-events-auto">
+        <a href="#about" className="text-slate-400 hover:text-[#F27D26] transition-colors" aria-label="Scroll Down">
           <ChevronDown className="w-5 h-5 animate-bounce" />
         </a>
       </div>
