@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #0F141E;
+    color: #F1F5F9;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Space Grotesk', 'Cabinet Grotesk', 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+  }
+
+  .font-mono-tech {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Bold Typography Theme Backgrounds & Engineering Grids */
+.blueprint-grid {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.blueprint-grid-dense {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(242, 125, 38, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(242, 125, 38, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px, 20px 20px, 80px 80px, 80px 80px;
+}
+
+.accent-glow {
+  box-shadow: 0 0 40px rgba(242, 125, 38, 0.15);
+}
+
+.accent-glow-lg {
+  box-shadow: 0 0 60px rgba(242, 125, 38, 0.25);
+}
+
+.line-decor {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #F27D26, transparent);
+}
+
+.stroke-title-orange {
+  -webkit-text-stroke: 1.5px #F27D26;
+  color: transparent;
+}
+
+.stroke-title-white {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
+  color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #0F141E;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F27D26;
+}
+
+/* Pulse animation for technical nodes */
+@keyframes techPulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.15); }
+}
+
+.animate-tech-pulse {
+  animation: techPulse 3s infinite ease-in-out;
+}
