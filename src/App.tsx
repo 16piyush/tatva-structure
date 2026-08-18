@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
+import HeroCarousel from './components/HeroCarousel';
 import AboutSection from './components/AboutSection';
 import CoreExpertiseSection from './components/CoreExpertiseSection';
 import ServicesSection from './components/ServicesSection';
@@ -50,9 +50,9 @@ export default function App() {
 
       {/* Main Content Sections */}
       <main>
-        {/* Hero Section */}
-        <Hero 
-          onOpenInquiry={() => handleOpenInquiry('New Structural Design Project')}
+        {/* Hero Showcase Carousel */}
+        <HeroCarousel 
+          onOpenInquiry={(subject) => handleOpenInquiry(subject || 'New Structural Design Project')}
           onOpenBlueprint={() => setBlueprintModalOpen(true)}
         />
 
