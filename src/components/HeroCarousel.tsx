@@ -39,6 +39,7 @@ interface SlideItem {
   subtitle: string;
   description: string;
   bgImage: string;
+  siteLabel: string;
   stats: {
     value: string;
     label: string;
@@ -58,6 +59,7 @@ const CAROUSEL_SLIDES: SlideItem[] = [
     subtitle: '100,000+ SQ.FT MANUFACTURING SHEDS, CRANE GIRDERS & STORAGE SILOS',
     description: 'High-precision structural design of massive manufacturing facilities, long-span Pre-Engineered Buildings (PEB), heavy gantry crane supporting systems, and dynamic machine foundation mats.',
     bgImage: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=85',
+    siteLabel: 'HEAVY STEEL FABRICATION & PEB SHED',
     stats: [
       { value: '100K+', label: 'SQ.FT PEB SHEDS' },
       { value: 'IS 800', label: '& AISC 360 CODES' },
@@ -77,6 +79,7 @@ const CAROUSEL_SLIDES: SlideItem[] = [
     subtitle: 'DELHI METRO PHASE 4, CONCOURSE CROSS ARMS & SPECIAL LAUNCHING GIRDERS',
     description: 'Specialized structural engineering for precast post-tensioned metro pier caps, curved track viaducts, double-track concourse cross-arms, and elastomeric bridge bearings engineered for rigorous dynamic IRS loads.',
     bgImage: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=2000&q=85',
+    siteLabel: 'ELEVATED METRO VIADUCT & PIER SYSTEM',
     stats: [
       { value: 'PHASE 4', label: 'DELHI MRTS TRACKS' },
       { value: 'PT-RCC', label: 'POST-TENSIONED ARMS' },
@@ -96,6 +99,7 @@ const CAROUSEL_SLIDES: SlideItem[] = [
     subtitle: 'OKHLA STP NEW DELHI, AEROBIC DIGESTERS & DEEP WATER INTAKE WELLS',
     description: 'Heavy reinforced concrete hydraulic design for 215 MLD wastewater treatment facilities, circular clariflocculators, aerobic digesters, pump houses, and deep retention intake structures conforming to IS 3370 liquid retaining criteria.',
     bgImage: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=2000&q=85',
+    siteLabel: '215 MLD OKHLA STP & LIQUID TANKS',
     stats: [
       { value: '215 MLD', label: 'LARGEST STP ASSET' },
       { value: 'IS 3370', label: 'LIQUID CRACK WIDTH' },
@@ -115,6 +119,7 @@ const CAROUSEL_SLIDES: SlideItem[] = [
     subtitle: 'COMPOSITE STEEL GIRDERS, PRESTRESSED I-BEAMS & UK CURVED BRIDGES',
     description: 'Comprehensive structural analysis and vetting for 140m composite bridges, continuous highway flyovers across major Indian arterial corridors, and UK Highways curved superstructure assessments under CS 454.',
     bgImage: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=2000&q=85',
+    siteLabel: '140M COMPOSITE BRIDGE & FLYOVERS',
     stats: [
       { value: '140M', label: 'MULTI-SPAN BRIDGES' },
       { value: 'CS 454', label: 'UK HIGHWAYS CODE' },
@@ -133,7 +138,8 @@ const CAROUSEL_SLIDES: SlideItem[] = [
     titlePart2: 'GIS SUBSTATIONS',
     subtitle: '85M TALL CHIMNEYS, TURBINE FOUNDATIONS & 400KV GIS BUILDINGS',
     description: 'High-complexity structural solutions for thermal power generation assets, 85-meter industrial chimneys for NBCC, heavy dynamic vibrating turbine foundations, and 400kV gas-insulated substations vetted by AECOM.',
-    bgImage: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=2000&q=85',
+    bgImage: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=2000&q=85',
+    siteLabel: '400KV GIS SUBSTATION & POWER ASSETS',
     stats: [
       { value: '85M TALL', label: 'RCC CHIMNEYS' },
       { value: '400 KV', label: 'GIS SUBSTATIONS' },
@@ -153,6 +159,7 @@ const CAROUSEL_SLIDES: SlideItem[] = [
     subtitle: 'PROJECTS IN ETHIOPIA, UAE & UNITED KINGDOM ACCORDING TO EUROCODES & ACI',
     description: 'Turnkey structural consultancy delivering projects worldwide in accordance with British Standards (BS), Eurocodes (EN 1991-1993), American Concrete Institute (ACI 318), AISC 360, and Abu Dhabi International Building Codes.',
     bgImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=85',
+    siteLabel: 'INTERNATIONAL HIGH-RISE & EDIBLE OIL PLANTS',
     stats: [
       { value: 'EUROCODES', label: 'EN 1991 / 1992 / 1993' },
       { value: 'ACI / AISC', label: 'US CODE COMPLIANCE' },
@@ -243,19 +250,20 @@ export default function HeroCarousel({
               <img 
                 src={slide.bgImage} 
                 alt={slide.titlePart1 + ' ' + slide.titlePart2} 
-                className="w-full h-full object-cover object-center scale-105 transition-transform duration-[7000ms] ease-out transform"
+                className="w-full h-full object-cover object-center transition-transform duration-[7000ms] ease-out transform brightness-[0.75] contrast-[1.15]"
                 style={{
-                  transform: isActive ? 'scale(1.08)' : 'scale(1.0)'
+                  transform: isActive ? 'scale(1.06)' : 'scale(1.0)'
                 }}
               />
-              {/* Heavy architectural gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0F141E] via-[#0F141E]/95 to-[#161C27]/85" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0F141E] via-transparent to-[#0F141E]/90" />
+              {/* Dynamic multi-directional gradient: darker on the left for text contrast, open on the right for structural photo visibility */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0F141E] via-[#0F141E]/85 to-[#0F141E]/40" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0F141E] via-transparent to-[#0F141E]/70" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#0F141E]/80 via-transparent to-[#0F141E]" />
             </div>
           );
         })}
         {/* Persistent Technical Blueprint Grid */}
-        <div className="absolute inset-0 blueprint-grid pointer-events-none opacity-35 z-10" />
+        <div className="absolute inset-0 blueprint-grid pointer-events-none opacity-25 z-10" />
       </div>
 
       {/* Decorative Glow Orbs & Architectural Accents */}
@@ -445,17 +453,21 @@ export default function HeroCarousel({
                   <ShieldCheck className="w-3.5 h-3.5" />
                   STRUCTURAL SPEC
                 </span>
-                <span className="text-[10px] font-mono-tech px-2 py-0.5 rounded-sm bg-white/5 border border-white/10 text-slate-300 uppercase">
-                  ACTIVE SECTOR
+                <span className="text-[9px] font-mono-tech px-2 py-0.5 rounded-sm bg-[#F27D26]/20 border border-[#F27D26]/40 text-[#F27D26] uppercase font-bold">
+                  LIVE WORK ASSET
                 </span>
               </div>
 
-              {/* Sector Quick Details */}
+              {/* Sector Quick Details & Work Site Badge */}
               <div className="space-y-2.5">
+                <div className="text-[10px] font-mono-tech text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+                  <span className="text-slate-300 font-bold">{currentSlide.siteLabel}</span>
+                </div>
                 <div className="text-sm font-bold uppercase tracking-wide text-white font-heading">
                   {currentSlide.titlePart1} {currentSlide.titlePart2}
                 </div>
-                <p className="text-xs text-slate-400 leading-relaxed line-clamp-3">
+                <p className="text-xs text-slate-300 leading-relaxed line-clamp-3">
                   {currentSlide.description}
                 </p>
 
