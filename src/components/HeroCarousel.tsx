@@ -91,6 +91,26 @@ const CAROUSEL_SLIDES: SlideItem[] = [
     sectionTarget: 'metro'
   },
   {
+    id: 'concrete-highrise',
+    categoryTag: 'RCC & TOWER CRANE CIVIL CASTING',
+    categoryIcon: Building2,
+    titlePart1: 'MASS RAFT & RCC',
+    titlePart2: 'HIGH-RISE FRAMING',
+    subtitle: '2.5M THICK MASS RAFT FOUNDATIONS, SHEAR WALLS & SEISMIC DUCTILITY',
+    description: 'High-rise residential and commercial tower structural engineering with thermal crack-width mitigation for mass concrete pours, rebar detailing under IS 13920, and dual-system core shear wall design.',
+    bgImage: 'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=2000&q=85',
+    siteLabel: 'MASS CONCRETE RAFT & TOWER CRANE SITE',
+    stats: [
+      { value: 'M50 GRADE', label: 'HIGH-STRENGTH RCC' },
+      { value: 'IS 13920', label: 'DUCTILE DETAILING' },
+      { value: 'ETABS 3D', label: 'NON-LINEAR P-DELTA' },
+      { value: 'ZONE V', label: 'SEISMIC RESILIENT' }
+    ],
+    specPills: ['Mass Concrete Thermal Checks', 'Core Shear Wall Detailing', 'Transfer Girder Analysis', 'Rebar Congestion Optimization'],
+    inquirySubject: 'High-Rise RCC & Foundation Structural Inquiry',
+    sectionTarget: 'expertise'
+  },
+  {
     id: 'water-stp',
     categoryTag: 'WATER & WASTEWATER INFRASTRUCTURE',
     categoryIcon: Droplets,
@@ -98,7 +118,7 @@ const CAROUSEL_SLIDES: SlideItem[] = [
     titlePart2: 'SEWAGE PLANTS (STP)',
     subtitle: 'OKHLA STP NEW DELHI, AEROBIC DIGESTERS & DEEP WATER INTAKE WELLS',
     description: 'Heavy reinforced concrete hydraulic design for 215 MLD wastewater treatment facilities, circular clariflocculators, aerobic digesters, pump houses, and deep retention intake structures conforming to IS 3370 liquid retaining criteria.',
-    bgImage: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=2000&q=85',
+    bgImage: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=2000&q=85',
     siteLabel: '215 MLD OKHLA STP & LIQUID TANKS',
     stats: [
       { value: '215 MLD', label: 'LARGEST STP ASSET' },
@@ -129,6 +149,26 @@ const CAROUSEL_SLIDES: SlideItem[] = [
     specPills: ['Continuous Steel Plate Girders', 'Prestressed Concrete Beams', 'Bearing Seat Analysis', 'Expansion Joint Detailing'],
     inquirySubject: 'Bridge & Flyover Structural Engineering Inquiry',
     sectionTarget: 'bridges'
+  },
+  {
+    id: 'deep-foundations',
+    categoryTag: 'GEOTECHNICAL & DEEP SHORING',
+    categoryIcon: ShieldCheck,
+    titlePart1: 'DEEP BASEMENTS &',
+    titlePart2: 'DIAPHRAGM SHORING',
+    subtitle: 'MULTI-TIER EXCAVATIONS, GROUND ANCHORS & CONTIGUOUS PILING',
+    description: 'Specialized geotechnical structural engineering for multi-tier subterranean basements up to 18m deep, contiguous pile walls, prestressed ground anchors, and settlement prediction for adjacent infrastructure.',
+    bgImage: 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=2000&q=85',
+    siteLabel: '18M DEEP EXCAVATION & PILING SHORING',
+    stats: [
+      { value: '18M DEEP', label: 'EXCAVATION WALLS' },
+      { value: 'IS 2911', label: 'PILE CAP DESIGNS' },
+      { value: 'PLAXIS 2D', label: 'SOIL-STRUCTURE FEA' },
+      { value: 'ZERO-MOVE', label: 'SETTLEMENT CONTROL' }
+    ],
+    specPills: ['Diaphragm Slurry Walls', 'Pre-stressed Tieback Anchors', 'Hydrostatic Water Cut-Off', 'Adjacent Building Safety'],
+    inquirySubject: 'Deep Basement & Foundation Shoring Inquiry',
+    sectionTarget: 'expertise'
   },
   {
     id: 'power-substations',
@@ -250,6 +290,7 @@ export default function HeroCarousel({
               <img 
                 src={slide.bgImage} 
                 alt={slide.titlePart1 + ' ' + slide.titlePart2} 
+                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center transition-transform duration-[7000ms] ease-out transform brightness-[0.75] contrast-[1.15]"
                 style={{
                   transform: isActive ? 'scale(1.06)' : 'scale(1.0)'
@@ -443,36 +484,51 @@ export default function HeroCarousel({
             </div>
           </div>
 
-          {/* Right Column: Mini Blueprint Snapshot & Engineering Card */}
+          {/* Right Column: Mini Civil Engineering Site Photo & Engineering Specs Card */}
           <div className="lg:col-span-4 space-y-3">
-            <div className="bg-[#161C27] border border-white/10 rounded-sm p-5 sm:p-6 shadow-2xl relative overflow-hidden accent-glow">
+            <div className="bg-[#161C27] border border-white/10 rounded-sm p-4 sm:p-5 shadow-2xl relative overflow-hidden accent-glow">
               
               {/* Card Top Technical Header */}
-              <div className="flex items-center justify-between pb-3 mb-3 border-b border-white/10">
+              <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-white/10">
                 <span className="text-[10px] font-bold text-[#F27D26] tracking-[0.2em] uppercase font-mono-tech flex items-center gap-1.5">
                   <ShieldCheck className="w-3.5 h-3.5" />
-                  STRUCTURAL SPEC
+                  CIVIL SITE INSPECTION
                 </span>
                 <span className="text-[9px] font-mono-tech px-2 py-0.5 rounded-sm bg-[#F27D26]/20 border border-[#F27D26]/40 text-[#F27D26] uppercase font-bold">
                   LIVE WORK ASSET
                 </span>
               </div>
 
-              {/* Sector Quick Details & Work Site Badge */}
-              <div className="space-y-2.5">
-                <div className="text-[10px] font-mono-tech text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-                  <span className="text-slate-300 font-bold">{currentSlide.siteLabel}</span>
+              {/* Civil Engineering Photo Box */}
+              <div className="relative rounded-sm overflow-hidden border border-white/10 bg-black/60 aspect-[16/9] mb-3 group/img">
+                <img 
+                  src={currentSlide.bgImage} 
+                  alt={currentSlide.siteLabel}
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover object-center group-hover/img:scale-105 transition-transform duration-500 brightness-95" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#161C27] via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between text-[9px] font-mono-tech">
+                  <span className="bg-black/80 px-2 py-0.5 rounded-sm text-slate-200 border border-white/10 backdrop-blur-xs truncate max-w-[190px]">
+                    {currentSlide.siteLabel}
+                  </span>
+                  <span className="bg-[#F27D26] text-white font-bold px-1.5 py-0.5 rounded-sm">
+                    FEA VETTED
+                  </span>
                 </div>
+              </div>
+
+              {/* Sector Quick Details */}
+              <div className="space-y-2">
                 <div className="text-sm font-bold uppercase tracking-wide text-white font-heading">
                   {currentSlide.titlePart1} {currentSlide.titlePart2}
                 </div>
-                <p className="text-xs text-slate-300 leading-relaxed line-clamp-3">
+                <p className="text-xs text-slate-300 leading-relaxed line-clamp-2">
                   {currentSlide.description}
                 </p>
 
                 {/* Micro Key-Value Matrix */}
-                <div className="grid grid-cols-2 gap-2 pt-2 text-[11px] font-mono-tech">
+                <div className="grid grid-cols-2 gap-2 pt-1 text-[11px] font-mono-tech">
                   <div className="bg-white/5 p-2 rounded-sm border border-white/10">
                     <div className="text-[#F27D26] font-bold text-[10px]">CONSULTANCY</div>
                     <div className="text-slate-200 truncate">Turnkey Design</div>
@@ -485,8 +541,8 @@ export default function HeroCarousel({
               </div>
 
               {/* Computational Software Badges */}
-              <div className="mt-3 pt-3 border-t border-white/10">
-                <div className="text-[9px] font-bold text-slate-400 tracking-[0.2em] uppercase mb-1.5 font-mono-tech">
+              <div className="mt-2.5 pt-2.5 border-t border-white/10">
+                <div className="text-[9px] font-bold text-slate-400 tracking-[0.2em] uppercase mb-1 font-mono-tech">
                   COMPUTATIONAL TOOLS
                 </div>
                 <div className="flex flex-wrap gap-1">
@@ -500,7 +556,7 @@ export default function HeroCarousel({
             </div>
 
             {/* Quick Director Contact Bar */}
-            <div className="bg-[#161C27]/90 border border-white/10 rounded-sm p-3 flex items-center justify-between text-xs">
+            <div className="bg-[#161C27]/90 border border-white/10 rounded-sm p-2.5 flex items-center justify-between text-xs">
               <div className="text-slate-300">
                 <span className="text-slate-500 font-mono-tech uppercase text-[10px]">DIRECTOR: </span>
                 <span className="font-bold text-white uppercase text-[11px]">Jitendra Arya</span>
@@ -514,7 +570,7 @@ export default function HeroCarousel({
 
         {/* Bottom Carousel Selector Bar (Interactive Tabs + Real-Time Progress Bar) */}
         <div className="pt-2 sm:pt-4 border-t border-white/10">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2">
             {CAROUSEL_SLIDES.map((slide, idx) => {
               const isActive = idx === currentSlideIndex;
               const Icon = slide.categoryIcon;

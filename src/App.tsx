@@ -10,6 +10,7 @@ import ApproachSection from './components/ApproachSection';
 import ProjectsPortfolio from './components/ProjectsPortfolio';
 import MetroSpecialSection from './components/MetroSpecialSection';
 import BridgeSection from './components/BridgeSection';
+import CivilSiteGallerySection from './components/CivilSiteGallerySection';
 import FounderTrackRecordSection from './components/FounderTrackRecordSection';
 import InternationalExperienceSection from './components/InternationalExperienceSection';
 import ToolsAndCodesSection from './components/ToolsAndCodesSection';
@@ -87,6 +88,12 @@ export default function App() {
         <ProjectsPortfolio 
           onSelectProject={(proj) => setSelectedProject(proj)}
           onOpenInquiry={handleOpenInquiry}
+        />
+
+        {/* 7.1 Civil Engineering On-Site Photographic Gallery */}
+        <CivilSiteGallerySection 
+          onOpenInquiry={handleOpenInquiry}
+          onOpenBlueprintModal={() => setBlueprintModalOpen(true)}
         />
 
         {/* 8. Metro & Transportation Projects */}

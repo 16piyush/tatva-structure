@@ -113,29 +113,30 @@ export default function AboutSection({ onOpenInquiry, onOpenBlueprintModal }: Ab
           <div className="lg:col-span-6 space-y-4">
             
             {/* Primary Visual with Blueprint HUD */}
-            <div className="relative rounded-sm overflow-hidden border border-white/10 bg-[#161C27] shadow-2xl group accent-glow">
+            <div className="relative rounded-sm overflow-hidden border border-white/15 bg-[#161C27] shadow-2xl group accent-glow">
               <img 
-                src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1200&q=80" 
+                src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1200&q=85" 
                 alt="Engineering Precision and Structural Framework" 
-                className="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-40 filter grayscale contrast-125"
+                referrerPolicy="no-referrer"
+                className="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-80 brightness-95"
               />
               
               {/* Technical Drawing Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0F141E] via-transparent to-[#0F141E]/80" />
-              <div className="absolute inset-0 blueprint-grid opacity-50 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0F141E] via-[#0F141E]/40 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 blueprint-grid opacity-35 pointer-events-none" />
 
               {/* HUD Graphics on Visual */}
               <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
                 <div className="bg-[#161C27]/90 border border-white/10 px-3 py-1.5 rounded-sm text-[11px] font-mono-tech text-slate-300 backdrop-blur-md">
                   <span className="text-[#F27D26] font-bold">DISCIPLINE:</span> STRUCTURAL & FOUNDATION
                 </div>
-                <div className="bg-white/10 border border-white/20 px-2.5 py-1 rounded-sm text-[10px] font-mono-tech text-white uppercase font-bold">
+                <div className="bg-white/10 border border-white/20 px-2.5 py-1 rounded-sm text-[10px] font-mono-tech text-white uppercase font-bold backdrop-blur-md">
                   STAAD / ETABS / TEKLA
                 </div>
               </div>
 
               {/* Floating Technical Blueprint Box */}
-              <div className="absolute bottom-4 left-4 right-4 bg-[#161C27]/95 border border-white/10 p-4 rounded-sm backdrop-blur-lg">
+              <div className="absolute bottom-4 left-4 right-4 bg-[#161C27]/95 border border-white/15 p-4 rounded-sm backdrop-blur-lg">
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center space-x-2">
                     <FileCode2 className="w-4 h-4 text-[#F27D26]" />
@@ -145,7 +146,7 @@ export default function AboutSection({ onOpenInquiry, onOpenBlueprintModal }: Ab
                   </div>
                   <button 
                     onClick={onOpenBlueprintModal}
-                    className="inline-flex items-center space-x-1 text-[11px] font-mono-tech text-[#F27D26] hover:text-[#ff8c38] font-bold uppercase transition-colors"
+                    className="inline-flex items-center space-x-1 text-[11px] font-mono-tech text-[#F27D26] hover:text-[#ff8c38] font-bold uppercase transition-colors cursor-pointer"
                   >
                     <span>View Schematics</span>
                     <Maximize2 className="w-3 h-3" />
@@ -159,6 +160,50 @@ export default function AboutSection({ onOpenInquiry, onOpenBlueprintModal }: Ab
                   <span className="text-emerald-400 font-bold">ALL MAJOR CODES COMPLIANT</span>
                 </div>
               </div>
+            </div>
+
+            {/* 4-Photo Civil Engineering Site Execution Mini-Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
+              {[
+                {
+                  img: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80',
+                  title: 'REBAR & CASTING',
+                  sub: 'IS 13920 Ductility'
+                },
+                {
+                  img: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80',
+                  title: 'STEEL ERECTION',
+                  sub: 'AISC 360 Framing'
+                },
+                {
+                  img: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80',
+                  title: 'METRO VIADUCTS',
+                  sub: 'IRS / IRC 112'
+                },
+                {
+                  img: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=600&q=80',
+                  title: 'MASS CONCRETE',
+                  sub: 'IS 3370 Liquid Mat'
+                }
+              ].map((item, idx) => (
+                <div key={idx} className="relative rounded-sm overflow-hidden border border-white/15 group aspect-[4/3] bg-slate-900 shadow-md">
+                  <img 
+                    src={item.img} 
+                    alt={item.title} 
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 brightness-95 group-hover:brightness-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent pointer-events-none" />
+                  <div className="absolute bottom-1.5 left-1.5 right-1.5 text-left pointer-events-none">
+                    <div className="text-[9px] font-mono-tech font-bold text-white uppercase truncate">
+                      {item.title}
+                    </div>
+                    <div className="text-[8px] font-mono-tech text-[#F27D26] font-semibold truncate">
+                      {item.sub}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
 
             {/* Quick Consultation Ribbon */}

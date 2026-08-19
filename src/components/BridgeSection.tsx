@@ -94,7 +94,8 @@ export default function BridgeSection({ onOpenInquiry }: BridgeSectionProps) {
                 <img 
                   src={bridge.imageUrl} 
                   alt={bridge.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-70"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-95"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B1526] via-transparent to-transparent" />
                 

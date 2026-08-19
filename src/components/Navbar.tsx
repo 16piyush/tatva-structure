@@ -50,6 +50,7 @@ export default function Navbar({ onOpenInquiry, onOpenBlueprint }: NavbarProps) 
     { label: 'About', href: '#about' },
     { label: 'Services', href: '#services' },
     { label: 'Projects', href: '#projects' },
+    { label: 'Site Gallery', href: '#civil-gallery' },
     { label: 'Expertise', href: '#expertise' },
     { label: 'Track Record', href: '#track-record' },
     { label: 'Team', href: '#team' },
