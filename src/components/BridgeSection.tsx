@@ -27,7 +27,7 @@ export default function BridgeSection({ onOpenInquiry }: BridgeSectionProps) {
         'Substructure pier and pile cap schedules'
       ],
       standards: 'IRC 112 / IRC 6 / MoRTH Standards',
-      imageUrl: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=1200&q=80',
+      imageUrl: '/images/project_patna_six_lane_flyover.jpg',
       badge: 'Six-Lane Flyover'
     },
     {

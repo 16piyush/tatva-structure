@@ -28,7 +28,7 @@ export default function Navbar({ onOpenInquiry, onOpenBlueprint }: NavbarProps) 
         setIsScrolled(false);
       }
 
-      const sections = ['home', 'about', 'expertise', 'services', 'projects', 'metro', 'bridges', 'track-record', 'international', 'team', 'contact'];
+      const sections = ['home', 'about', 'expertise', 'services', 'projects', 'metro', 'bridges', 'track-record', 'international', 'contact'];
       for (const sectionId of sections) {
         const el = document.getElementById(sectionId);
         if (el) {
@@ -53,7 +53,6 @@ export default function Navbar({ onOpenInquiry, onOpenBlueprint }: NavbarProps) 
     { label: 'Site Gallery', href: '#civil-gallery' },
     { label: 'Expertise', href: '#expertise' },
     { label: 'Track Record', href: '#track-record' },
-    { label: 'Team', href: '#team' },
     { label: 'Contact', href: '#contact' },
   ];
 

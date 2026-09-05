@@ -551,7 +551,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     ],
     specs: '6-Lane High Capacity Urban Flyover',
     highlights: ['Heavy 6-lane live traffic loading', 'Precast post-tensioned pier caps', 'Deep bored piling systems'],
-    imageUrl: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/project_patna_six_lane_flyover.jpg',
     tag: 'Highway & Flyover',
     featured: true
   },
@@ -892,7 +892,7 @@ export const INDUSTRIES_SERVED: IndustryItem[] = [
     id: 'infrastructure',
     title: 'Infrastructure & Highways',
     description: 'Flyovers, long-span continuous bridges, pedestrian overpasses, and high-speed signage gantries.',
-    imageUrl: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=800&q=80',
+    imageUrl: '/images/project_patna_six_lane_flyover.jpg',
     focusAreas: ['Multi-Lane Elevated Corridors', 'Precast Post-Tensioned Pier Caps', 'Deep Bored Piling']
   },
   {

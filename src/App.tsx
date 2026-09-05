@@ -14,7 +14,6 @@ import CivilSiteGallerySection from './components/CivilSiteGallerySection';
 import FounderTrackRecordSection from './components/FounderTrackRecordSection';
 import InternationalExperienceSection from './components/InternationalExperienceSection';
 import ToolsAndCodesSection from './components/ToolsAndCodesSection';
-import TeamSection from './components/TeamSection';
 import CtaSection from './components/CtaSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -119,12 +118,7 @@ export default function App() {
         {/* 12. Engineering Tools & Global Design Codes */}
         <ToolsAndCodesSection />
 
-        {/* 13. Our Core Team */}
-        <TeamSection 
-          onOpenInquiry={handleOpenInquiry}
-        />
-
-        {/* 14. Primary CTA */}
+        {/* 13. Primary CTA */}
         <CtaSection 
           onOpenInquiry={handleOpenInquiry}
         />

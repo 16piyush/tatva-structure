@@ -28,7 +28,6 @@ export default function Footer({ onOpenInquiry }: FooterProps) {
     { label: 'Metro & Transportation', href: '#metro' },
     { label: 'Bridge Projects', href: '#bridges' },
     { label: "Founder's Track Record", href: '#track-record' },
-    { label: 'Our Core Team', href: '#team' },
     { label: 'Contact', href: '#contact' },
   ];
 
