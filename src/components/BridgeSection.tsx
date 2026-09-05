@@ -57,7 +57,7 @@ export default function BridgeSection({ onOpenInquiry }: BridgeSectionProps) {
         'Capacity rating and load assessment report'
       ],
       standards: 'UK Highways Standards CS 454 & CS 455',
-      imageUrl: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=80',
+      imageUrl: '/images/project_patna_six_lane_flyover.jpg',
       badge: 'UK Bridge Assessment'
     }
   ];

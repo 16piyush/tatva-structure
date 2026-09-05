@@ -52,42 +52,42 @@ export default function IndustriesSection({ onOpenInquiry }: IndustriesSectionPr
                 className="group relative rounded-xl overflow-hidden border border-slate-800 bg-[#0B1526] hover:border-[#E06D14]/70 transition-all duration-300 flex flex-col justify-between h-72 shadow-lg hover:shadow-2xl hover:shadow-black/70 cursor-pointer"
                 onClick={() => onOpenInquiry(`Industry Consultation: ${ind.title}`)}
               >
-                {/* Background Image with Dark Tint */}
+                {/* Background Image with Bright Industrial Clarity */}
                 <div className="absolute inset-0 z-0">
                   <img 
                     src={ind.imageUrl} 
                     alt={ind.title} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-25 group-hover:opacity-40"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-95 brightness-95 group-hover:brightness-105 contrast-[1.05]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B1526] via-[#0B1526]/80 to-transparent" />
-                  <div className="absolute inset-0 blueprint-grid opacity-15" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#070D18] via-[#070D18]/65 via-45% to-black/20" />
+                  <div className="absolute inset-0 blueprint-grid opacity-10" />
                 </div>
 
                 {/* Top Badge */}
-                <div className="relative z-10 p-5 flex justify-between items-start">
-                  <span className="text-[11px] font-mono-tech text-slate-400 group-hover:text-[#E06D14] transition-colors">
+                <div className="relative z-10 p-4 flex justify-between items-start">
+                  <span className="text-[11px] font-mono-tech text-white font-bold px-2 py-0.5 rounded bg-black/60 backdrop-blur-sm border border-white/20 group-hover:text-[#F27D26] group-hover:border-[#F27D26]/60 transition-colors">
                     #{(index + 1).toString().padStart(2, '0')}
                   </span>
-                  <div className="w-8 h-8 rounded-lg bg-slate-900/80 border border-slate-700/80 flex items-center justify-center text-slate-300 group-hover:bg-[#E06D14] group-hover:text-white group-hover:border-[#E06D14] transition-all">
+                  <div className="w-8 h-8 rounded-lg bg-black/60 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white group-hover:bg-[#F27D26] group-hover:text-white group-hover:border-[#F27D26] transition-all shadow-md">
                     <ArrowRight className="w-4 h-4 -rotate-45 group-hover:rotate-0 transition-transform" />
                   </div>
                 </div>
 
-                {/* Content at Bottom */}
-                <div className="relative z-10 p-5 space-y-2">
-                  <h3 className="text-base font-bold text-white font-heading group-hover:text-amber-400 transition-colors">
+                {/* Content at Bottom with Legible Backdrop */}
+                <div className="relative z-10 p-5 space-y-2 bg-gradient-to-t from-[#070D18] via-[#070D18]/90 to-transparent pt-8">
+                  <h3 className="text-base font-bold text-white font-heading group-hover:text-[#F27D26] transition-colors drop-shadow-sm">
                     {ind.title}
                   </h3>
-                  <p className="text-xs text-slate-300 line-clamp-2 leading-relaxed">
+                  <p className="text-xs text-slate-200 line-clamp-2 leading-relaxed drop-shadow-sm">
                     {ind.description}
                   </p>
                   
                   {/* Focus Areas Pills */}
-                  <div className="pt-2 flex flex-wrap gap-1">
+                  <div className="pt-2 flex flex-wrap gap-1.5">
                     {ind.focusAreas.slice(0, 2).map((focus, i) => (
                       <span 
                         key={i} 
-                        className="text-[10px] font-mono-tech px-2 py-0.5 rounded bg-slate-900/90 border border-slate-800 text-slate-400 group-hover:border-slate-700 group-hover:text-slate-200"
+                        className="text-[10px] font-mono-tech px-2 py-0.5 rounded bg-black/60 backdrop-blur-sm border border-white/15 text-slate-200 group-hover:border-slate-500 group-hover:text-white"
                       >
                         {focus}
                       </span>

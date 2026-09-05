@@ -1,54 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="100%" height="100%">
-  <!-- Crisp white square background as in user uploaded unnamed.png -->
-  <rect width="320" height="320" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <!-- Clean solid white background matching unnamed.png -->
+  <rect width="400" height="400" fill="#FFFFFF"/>
 
-  <!-- OFFICIAL EMBLEM -->
-  <g transform="translate(160, 98)">
+  <!-- OFFICIAL EMBLEM (Exact Geometric Construction of unnamed.png) -->
+  <g>
     <!-- 1. Orange Foundation House (Bottom-Left) -->
-    <polygon points="-50,60 -50,28 -31,14 -12,28 -12,60" fill="#E05926" />
+    <polygon points="142,192 142,160 165,145 188,160 188,192" fill="#DF5928" />
 
     <!-- 2. Outer Deep Navy Framework (Gable Roof & Right Pier) -->
     <path 
-      d="M -50,6 L -50,-18 L 0,-52 L 50,-18 L 50,60 L 32,60 L 32,-8 L 0,-29 L -32,-8 L -32,6 Z" 
-      fill="#0D2840" 
+      d="
+        M 142,126
+        L 142,88
+        L 200,52
+        L 258,88
+        L 258,192
+        L 238,192
+        L 238,100
+        L 200,76
+        L 162,100
+        L 162,126
+        Z
+      " 
+      fill="#0B253D" 
     />
 
-    <!-- 3. Inner Deep Navy Structural 'S' (Geometric Angles) -->
+    <!-- 3. Inner Deep Navy Structural 'S' Monogram -->
     <path 
-      d="M -18,-2 
-         L 0,-14 
-         L 22,1 
-         L 22,16 
-         L 6,6 
-         L -14,20 
-         L -14,38 
-         L 6,52 
-         L 24,39 
-         L 24,24 
-         L 13,32 
-         L 0,23 
-         L 0,14 
-         L 16,3 
-         L 34,15 
-         L 34,-9 
-         L 0,-32 
-         L -34,-9 
-         L -34,6 
-         L -18,-5 
-         Z" 
-      fill="#0D2840" 
+      d="
+        M 178,110
+        L 200,96
+        L 226,112
+        L 226,132
+        L 208,120
+        L 188,133
+        L 188,154
+        L 210,168
+        L 230,155
+        L 230,138
+        L 218,146
+        L 204,136
+        L 204,127
+        L 218,118
+        L 242,133
+        L 242,104
+        L 200,78
+        L 158,104
+        L 158,122
+        L 178,110
+        Z
+      " 
+      fill="#0B253D" 
     />
 
-    <!-- 4. Bottom Right Anchor Base -->
-    <polygon points="-2,60 50,60 50,48 14,48 2,56" fill="#0D2840" />
+    <!-- 4. Bottom-Right Baseline Solid Support -->
+    <polygon points="188,192 258,192 258,176 216,176 198,188" fill="#0B253D" />
   </g>
 
-  <!-- OFFICIAL BRAND TYPOGRAPHY -->
+  <!-- OFFICIAL TYPOGRAPHY (Pixel-perfect vectors & font stack) -->
   <g text-anchor="middle" font-family="'Montserrat', 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif">
-    <!-- TATVA: Heavy Solid Deep Navy -->
-    <text x="160" y="214" font-size="39" font-weight="900" fill="#0D2840" letter-spacing="0.09em">TATVA</text>
+    <!-- TATVA -->
+    <text x="200" y="264" font-size="48" font-weight="900" fill="#0B253D" letter-spacing="0.09em">TATVA</text>
     
-    <!-- STRUCTURA: Refined Medium Slate Navy (Tracked Out) -->
-    <text x="163" y="246" font-size="17" font-weight="700" fill="#22394E" letter-spacing="0.28em">STRUCTURA</text>
+    <!-- STRUCTURA -->
+    <text x="204" y="304" font-size="21" font-weight="700" fill="#253B4E" letter-spacing="0.28em">STRUCTURA</text>
   </g>
 </svg>

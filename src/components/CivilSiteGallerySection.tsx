@@ -86,10 +86,10 @@ const CIVIL_GALLERY_PHOTOS: CivilPhoto[] = [
     title: 'Elevated Metro Viaduct & Precast Pier Caps',
     category: 'metro',
     categoryLabel: 'MASS RAPID TRANSIT (MRTS)',
-    location: 'Delhi MRTS Phase 4 / Mumbai',
+    location: 'Mumbai Metro Line 6 / Delhi MRTS',
     specs: 'Precast Post-Tensioned Pier Caps | IRS Dynamic Rail Load',
     description: 'Segmental prestressed viaduct casting, cantilever concourse cross-arms, and elastomeric bridge bearings engineered for high-frequency railway braking and dynamic loads.',
-    imageUrl: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/mumbai_metro_line6_bc03.jpg',
     codeStandard: 'IRS Concrete Bridge Code / IRC 112'
   },
   {
@@ -122,7 +122,7 @@ const CIVIL_GALLERY_PHOTOS: CivilPhoto[] = [
     location: 'National Highway Corridors / UK',
     specs: '140m Continuous Composite Span | CS 454 Assessed',
     description: 'Fabricated steel plate girders with shear stud connectors, elastomeric pot bearings, and dynamic vehicle live-load simulations under IRC:6 and Eurocodes.',
-    imageUrl: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/project_patna_six_lane_flyover.jpg',
     codeStandard: 'IRC 112 / IRC 24 / UK CS 454'
   },
   {
@@ -133,7 +133,7 @@ const CIVIL_GALLERY_PHOTOS: CivilPhoto[] = [
     location: 'Metro Stations & High-Density Hubs',
     specs: '18m Deep Excavation | Multi-Tier Struts & Tie-Backs',
     description: 'Contiguous pile walls, pre-stressed ground anchor tendons, and finite element soil-structure interaction modeling to prevent settlement of adjacent historic structures.',
-    imageUrl: 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/project_mass_raft_rcc.jpg',
     codeStandard: 'IS 2911 / IS 14458 / Eurocode 7'
   },
   {

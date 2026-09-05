@@ -305,7 +305,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     scope: 'Structural design of blast-resistant building based on client load data.',
     specs: 'Military Engineer Services (MES) Blast-Resistant Criteria',
     highlights: ['Dynamic impulsive blast loading', 'Heavy ductile reinforcement detailing', 'Specialized protective structural geometry'],
-    imageUrl: 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/project_mass_raft_rcc.jpg',
     tag: 'Defense / Special Structure',
     featured: true
   },
@@ -317,7 +317,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     scope: 'Structure GA and fabrication drawings for maximum 10-ton loading.',
     specs: 'DMRC Metro Station Escalator Erection System',
     highlights: ['10-Ton heavy dynamic lifting load', 'Rigging and overhead crane frame GA', 'Fabrication shop drawings'],
-    imageUrl: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/project_tekla_cad_model.jpg',
     tag: 'Metro Infrastructure'
   },
   {
@@ -328,7 +328,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     scope: 'Structure GA and fabrication drawings for maximum 2-ton loading.',
     specs: 'DMRC Station Escalator Installation Framing',
     highlights: ['2-Ton hoist frame design', 'General Arrangement detailing', 'Precision fabrication plans'],
-    imageUrl: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/project_tekla_cad_model.jpg',
     tag: 'Metro Infrastructure'
   },
   {
@@ -498,7 +498,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     ],
     specs: 'High-Density Metro Viaduct & Elevated Stations',
     highlights: ['Precast post-tensioned pier caps', 'Cantilever arms & track supports', 'Deep pile foundation designs'],
-    imageUrl: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/project_patna_six_lane_flyover.jpg',
     tag: 'Metro Mass Transit',
     featured: true
   },
@@ -516,7 +516,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     ],
     specs: 'Elevated Corridor & Flyover Integration',
     highlights: ['Design Basis Report preparation', 'Cross arms & precast post-tensioned elements', 'Elastomeric bearing sizing'],
-    imageUrl: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/mumbai_metro_line6_bc03.jpg',
     tag: 'Metro Mass Transit',
     featured: true
   },
@@ -534,8 +534,9 @@ export const PROJECTS_DATA: ProjectItem[] = [
     ],
     specs: 'Elevated Mass Transit Metro Corridor',
     highlights: ['Complex alignment drawings', 'Viaduct pier caps & track arms', 'Heavy load foundation engineering'],
-    imageUrl: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80',
-    tag: 'Metro Mass Transit'
+    imageUrl: '/images/mumbai_metro_line6_bc01.jpg',
+    tag: 'Metro Mass Transit',
+    featured: true
   },
 
   // 7. Bridges
@@ -575,7 +576,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     scope: 'Assessment of superstructure and substructure with radius of 28.8m according to CS 454 & CS 455.',
     specs: 'Curved Bridge Assessment (Radius = 28.8m)',
     highlights: ['UK Highways standard CS 454 & CS 455', 'Curved deck torsion and shear evaluation', 'Superstructure & substructure rating'],
-    imageUrl: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/project_patna_six_lane_flyover.jpg',
     tag: 'UK Infrastructure Assessment'
   },
   {
@@ -955,7 +956,7 @@ export const INDUSTRIES_SERVED: IndustryItem[] = [
     id: 'metro-transportation',
     title: 'Metro & Mass Transit',
     description: 'Elevated viaducts, precast pier caps, concourse and track cross arms, and escalator erection gantries.',
-    imageUrl: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80',
+    imageUrl: '/images/project_patna_six_lane_flyover.jpg',
     focusAreas: ['Precast Post-Tensioned Caps', 'Concourse & Track Cross Arms', 'Elastomeric Bearings & Piers']
   },
   {

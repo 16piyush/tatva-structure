@@ -91,26 +91,6 @@ const CAROUSEL_SLIDES: SlideItem[] = [
     sectionTarget: 'site-gallery'
   },
   {
-    id: 'metro-viaducts',
-    categoryTag: 'MASS RAPID TRANSIT SYSTEMS',
-    categoryIcon: TrainTrack,
-    titlePart1: 'METRO RAIL VIADUCTS',
-    titlePart2: '& CANTILEVER PIER CAPS',
-    subtitle: 'DELHI METRO PHASE 4, CONCOURSE CROSS ARMS & SPECIAL LAUNCHING GIRDERS',
-    description: 'Specialized structural engineering for precast post-tensioned metro pier caps, curved track viaducts, double-track concourse cross-arms, and elastomeric bridge bearings engineered for rigorous dynamic IRS loads.',
-    bgImage: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=2000&q=85',
-    siteLabel: 'ELEVATED METRO VIADUCT & PIER SYSTEM',
-    stats: [
-      { value: 'PHASE 4', label: 'DELHI MRTS TRACKS' },
-      { value: 'PT-RCC', label: 'POST-TENSIONED ARMS' },
-      { value: 'IRS / IRC', label: 'RAILWAY STANDARDS' },
-      { value: 'DMRC', label: 'APPROVED DESIGNS' }
-    ],
-    specPills: ['Precast Segmental Viaducts', 'Post-Tensioning Schedules', 'Torsional Stress Checks', 'Seismic Zone IV/V Ductility'],
-    inquirySubject: 'Metro & Elevated Rail Structural Design Inquiry',
-    sectionTarget: 'metro'
-  },
-  {
     id: 'concrete-highrise',
     categoryTag: 'RCC & TOWER CRANE CIVIL CASTING',
     categoryIcon: Building2,
@@ -148,46 +128,6 @@ const CAROUSEL_SLIDES: SlideItem[] = [
     ],
     specPills: ['Crack Width < 0.1mm', 'Hydrodynamic Pressure Analysis', 'Uplift & Buoyancy Safety', 'Deep Soil Shoring'],
     inquirySubject: 'Water / Sewage Treatment Plant (STP) Design Inquiry',
-    sectionTarget: 'expertise'
-  },
-  {
-    id: 'bridges-flyovers',
-    categoryTag: 'CIVIL BRIDGES & HIGHWAY FLYOVERS',
-    categoryIcon: Compass,
-    titlePart1: 'MULTI-SPAN BRIDGES',
-    titlePart2: '& HIGHWAY FLYOVERS',
-    subtitle: 'COMPOSITE STEEL GIRDERS, PRESTRESSED I-BEAMS & UK CURVED BRIDGES',
-    description: 'Comprehensive structural analysis and vetting for 140m composite bridges, continuous highway flyovers across major Indian arterial corridors, and UK Highways curved superstructure assessments under CS 454.',
-    bgImage: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=2000&q=85',
-    siteLabel: '140M COMPOSITE BRIDGE & FLYOVERS',
-    stats: [
-      { value: '140M', label: 'MULTI-SPAN BRIDGES' },
-      { value: 'CS 454', label: 'UK HIGHWAYS CODE' },
-      { value: 'IRC 112', label: 'CONCRETE BRIDGES' },
-      { value: 'DYNAMIC', label: 'LIVE LOAD MODEL' }
-    ],
-    specPills: ['Continuous Steel Plate Girders', 'Prestressed Concrete Beams', 'Bearing Seat Analysis', 'Expansion Joint Detailing'],
-    inquirySubject: 'Bridge & Flyover Structural Engineering Inquiry',
-    sectionTarget: 'bridges'
-  },
-  {
-    id: 'deep-foundations',
-    categoryTag: 'GEOTECHNICAL & DEEP SHORING',
-    categoryIcon: ShieldCheck,
-    titlePart1: 'DEEP BASEMENTS &',
-    titlePart2: 'DIAPHRAGM SHORING',
-    subtitle: 'MULTI-TIER EXCAVATIONS, GROUND ANCHORS & CONTIGUOUS PILING',
-    description: 'Specialized geotechnical structural engineering for multi-tier subterranean basements up to 18m deep, contiguous pile walls, prestressed ground anchors, and settlement prediction for adjacent infrastructure.',
-    bgImage: 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=2000&q=85',
-    siteLabel: '18M DEEP EXCAVATION & PILING SHORING',
-    stats: [
-      { value: '18M DEEP', label: 'EXCAVATION WALLS' },
-      { value: 'IS 2911', label: 'PILE CAP DESIGNS' },
-      { value: 'PLAXIS 2D', label: 'SOIL-STRUCTURE FEA' },
-      { value: 'ZERO-MOVE', label: 'SETTLEMENT CONTROL' }
-    ],
-    specPills: ['Diaphragm Slurry Walls', 'Pre-stressed Tieback Anchors', 'Hydrostatic Water Cut-Off', 'Adjacent Building Safety'],
-    inquirySubject: 'Deep Basement & Foundation Shoring Inquiry',
     sectionTarget: 'expertise'
   },
   {
@@ -284,10 +224,12 @@ export default function HeroCarousel({
     };
   }, [currentSlideIndex, isPlaying, goToNextSlide]);
 
-  const handleActionNavigation = (targetId: string) => {
+  const handleActionNavigation = (targetId: string = 'services') => {
     const el = document.getElementById(targetId);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      window.location.hash = `#${targetId}`;
     }
   };
 
@@ -472,7 +414,7 @@ export default function HeroCarousel({
             {/* Action Buttons */}
             <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2.5 sm:gap-3 pt-2">
               <button
-                onClick={() => handleActionNavigation(currentSlide.sectionTarget)}
+                onClick={() => handleActionNavigation('services')}
                 className="w-full sm:w-auto inline-flex items-center justify-center px-4 sm:px-6 py-3 sm:py-3.5 rounded-sm font-bold text-xs sm:text-sm uppercase tracking-wider bg-[#F27D26] text-white hover:bg-[#ff8c38] shadow-lg shadow-[#F27D26]/20 transition-all duration-200 cursor-pointer"
                 id="carousel-btn-explore"
               >

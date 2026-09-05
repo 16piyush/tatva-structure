@@ -30,7 +30,7 @@ export default function MetroSpecialSection({ onOpenInquiry }: MetroSpecialSecti
         'Portal frame piers for urban road alignment constraints'
       ],
       techSpecs: 'DMRC Standard Specifications & IRS Concrete Bridge Code',
-      image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=85'
+      image: '/images/project_patna_six_lane_flyover.jpg'
     },
     bc03: {
       title: 'Mumbai Metro Line 6 — Package BC03',
@@ -45,7 +45,7 @@ export default function MetroSpecialSection({ onOpenInquiry }: MetroSpecialSecti
         'Seismic dynamic response modeling for coastal Mumbai'
       ],
       techSpecs: 'MMRDA Criteria, IRS Bridge Code & IRC 112',
-      image: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=85'
+      image: '/images/mumbai_metro_line6_bc03.jpg'
     },
     bc01: {
       title: 'Mumbai Metro Line 6 — Package BC01',
@@ -60,7 +60,7 @@ export default function MetroSpecialSection({ onOpenInquiry }: MetroSpecialSecti
         'Heavy live load rolling stock dynamic evaluation'
       ],
       techSpecs: 'MMRDA Criteria & RDSO Guidelines',
-      image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=1200&q=85'
+      image: '/images/mumbai_metro_line6_bc01.jpg'
     }
   };
 
