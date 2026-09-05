@@ -115,8 +115,12 @@ export default function Navbar({ onOpenInquiry, onOpenBlueprint }: NavbarProps) 
             className="flex items-center space-x-3 group"
             id="brand-logo-link"
           >
-            <div className="w-10 h-10 border-2 border-[#F27D26] bg-[#161C27] flex items-center justify-center font-bold text-xl font-heading text-white shadow-md group-hover:bg-[#F27D26] group-hover:text-black transition-all">
-              T
+            <div className="w-11 h-11 bg-white p-1 rounded-sm shadow-md border border-white/20 flex items-center justify-center shrink-0 group-hover:border-[#F27D26] transition-all">
+              <img 
+                src="/images/tatva_structura_mark.svg" 
+                alt="Tatva Structura Emblem" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <div className="text-xl sm:text-2xl font-black tracking-widest text-white font-heading uppercase flex items-center space-x-1.5">

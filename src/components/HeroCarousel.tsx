@@ -118,7 +118,7 @@ const CAROUSEL_SLIDES: SlideItem[] = [
     titlePart2: 'HIGH-RISE FRAMING',
     subtitle: '2.5M THICK MASS RAFT FOUNDATIONS, SHEAR WALLS & SEISMIC DUCTILITY',
     description: 'High-rise residential and commercial tower structural engineering with thermal crack-width mitigation for mass concrete pours, rebar detailing under IS 13920, and dual-system core shear wall design.',
-    bgImage: 'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=2000&q=85',
+    bgImage: '/images/project_mass_raft_rcc.jpg',
     siteLabel: 'MASS CONCRETE RAFT & TOWER CRANE SITE',
     stats: [
       { value: 'M50 GRADE', label: 'HIGH-STRENGTH RCC' },
@@ -138,7 +138,7 @@ const CAROUSEL_SLIDES: SlideItem[] = [
     titlePart2: 'SEWAGE PLANTS (STP)',
     subtitle: 'OKHLA STP NEW DELHI, AEROBIC DIGESTERS & DEEP WATER INTAKE WELLS',
     description: 'Heavy reinforced concrete hydraulic design for 215 MLD wastewater treatment facilities, circular clariflocculators, aerobic digesters, pump houses, and deep retention intake structures conforming to IS 3370 liquid retaining criteria.',
-    bgImage: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=2000&q=85',
+    bgImage: '/images/project_water_treatment_stp.jpg',
     siteLabel: '215 MLD OKHLA STP & LIQUID TANKS',
     stats: [
       { value: '215 MLD', label: 'LARGEST STP ASSET' },
@@ -401,9 +401,16 @@ export default function HeroCarousel({
             
             {/* Top Brand Tagline Lead */}
             <div className="flex items-center gap-2.5 sm:gap-3">
-              <div className="w-6 sm:w-10 h-px bg-[#F27D26]"></div>
+              <div className="w-7 h-7 p-0.5 bg-white rounded-sm border border-white/20 shadow-sm flex items-center justify-center shrink-0">
+                <img 
+                  src="/images/tatva_structura_mark.svg" 
+                  alt="Tatva Structura Logo" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="w-5 sm:w-8 h-px bg-[#F27D26]"></div>
               <span className="text-[#F27D26] uppercase tracking-[0.22em] font-bold text-[10px] sm:text-xs font-mono-tech">
-                STRUCTURAL DESIGN CONSULTANCY
+                TATVA STRUCTURA &bull; STRUCTURAL DESIGN CONSULTANCY
               </span>
             </div>
 

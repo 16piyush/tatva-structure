@@ -72,16 +72,25 @@ export default function ProjectInquiryModal({ isOpen, onClose, initialSubject }:
         </button>
 
         {/* Modal Header */}
-        <div className="p-6 bg-slate-900/90 border-b border-slate-800">
-          <div className="text-xs font-mono-tech text-[#E06D14] uppercase tracking-wider mb-1">
-            TATVA STRUCTURA &bull; PROJECT CONSULTATION
+        <div className="p-6 bg-slate-900/90 border-b border-slate-800 flex items-start gap-4">
+          <div className="w-12 h-12 rounded-sm bg-white p-1 border border-white/20 shadow-md shrink-0 hidden sm:flex items-center justify-center">
+            <img 
+              src="/images/tatva_structura_mark.svg" 
+              alt="Tatva Structura" 
+              className="w-full h-full object-contain"
+            />
           </div>
-          <h3 className="text-xl font-bold text-white font-heading">
-            Discuss Your Structural Project
-          </h3>
-          <p className="text-xs text-slate-400 mt-1">
-            Connect directly with Director of Business Development ({COMPANY_INFO.contactPerson}) & our technical directorship.
-          </p>
+          <div className="flex-1">
+            <div className="text-xs font-mono-tech text-[#F27D26] uppercase tracking-wider mb-1">
+              TATVA STRUCTURA &bull; PROJECT CONSULTATION
+            </div>
+            <h3 className="text-xl font-bold text-white font-heading">
+              Discuss Your Structural Project
+            </h3>
+            <p className="text-xs text-slate-400 mt-1">
+              Connect directly with Director of Business Development ({COMPANY_INFO.contactPerson}) & our technical directorship.
+            </p>
+          </div>
         </div>
 
         {/* Modal Body */}

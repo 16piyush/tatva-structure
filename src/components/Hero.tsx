@@ -41,7 +41,7 @@ export default function Hero({ onExploreExpertise, onViewProjects, onOpenInquiry
 
   // Background visuals switcher
   const heroBackgrounds = {
-    steel: 'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=2000&q=85',
+    steel: '/images/project_peb_site_erection.jpg',
     metro: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=2000&q=85',
     industrial: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=85',
   };

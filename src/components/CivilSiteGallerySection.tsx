@@ -100,7 +100,7 @@ const CIVIL_GALLERY_PHOTOS: CivilPhoto[] = [
     location: 'Gurugram / Noida',
     specs: '2.5m Thick Mass Raft | High-Grade M50 Concrete',
     description: 'Thermal cracking control during mass concrete pours, multi-tier column rebar cages, and ductile shear wall layouts designed for Seismic Zone IV/V.',
-    imageUrl: 'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/project_mass_raft_rcc.jpg',
     codeStandard: 'IS 456:2000 / IS 13920 / IS 1893'
   },
   {
@@ -111,7 +111,7 @@ const CIVIL_GALLERY_PHOTOS: CivilPhoto[] = [
     location: 'New Delhi (Yamuna Clean Mission)',
     specs: '215 MLD Capacity | Circular Clarifiers & Digesters',
     description: 'Fluid-retaining reinforced concrete tanks designed with stringent crack-width limitation (< 0.1 mm) and uplift hydrostatic relief under IS 3370.',
-    imageUrl: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/project_water_treatment_stp.jpg',
     codeStandard: 'IS 3370 (Parts 1-4) Water Retaining'
   },
   {

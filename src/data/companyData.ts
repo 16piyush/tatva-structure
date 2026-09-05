@@ -317,7 +317,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     scope: 'Structure GA and fabrication drawings for maximum 10-ton loading.',
     specs: 'DMRC Metro Station Escalator Erection System',
     highlights: ['10-Ton heavy dynamic lifting load', 'Rigging and overhead crane frame GA', 'Fabrication shop drawings'],
-    imageUrl: 'https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80',
     tag: 'Metro Infrastructure'
   },
   {
@@ -328,7 +328,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     scope: 'Structure GA and fabrication drawings for maximum 2-ton loading.',
     specs: 'DMRC Station Escalator Installation Framing',
     highlights: ['2-Ton hoist frame design', 'General Arrangement detailing', 'Precision fabrication plans'],
-    imageUrl: 'https://images.unsplash.com/photo-1477959858617-67f30bc75b82?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80',
     tag: 'Metro Infrastructure'
   },
   {
@@ -367,7 +367,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     scope: 'Structural design and civil construction drawings for STP.',
     specs: '75 KLD Modular Wastewater Treatment Facility',
     highlights: ['Water retaining structure design (IS 3370)', 'Civil construction drawings', 'Pump room & equalization tank'],
-    imageUrl: 'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/project_water_treatment_stp.jpg',
     tag: 'Water Treatment'
   },
   {
@@ -378,7 +378,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     scope: 'Complete civil design and drawings for all units.',
     specs: '10 MLD Municipal / Industrial STP System',
     highlights: ['Multi-unit treatment basin design', 'Clarifier & aeration tank structural design', 'Full civil execution drawings'],
-    imageUrl: 'https://images.unsplash.com/photo-1574958269340-fa927304f208?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/project_water_treatment_stp.jpg',
     tag: 'Water & Wastewater',
     featured: true
   },
@@ -465,7 +465,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     scope: 'Strengthening of an existing slab to carry additional load using GFRP strips.',
     specs: 'Advanced Glass Fiber Reinforced Polymer (GFRP) Retrofit',
     highlights: ['Capacity upgrade for increased load requirements', 'Epoxy bonded GFRP strip layout', 'Flexural and shear capacity verification'],
-    imageUrl: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/project_mass_raft_rcc.jpg',
     tag: 'Rehabilitation & Retrofitting',
     featured: true
   },
@@ -920,21 +920,21 @@ export const INDUSTRIES_SERVED: IndustryItem[] = [
     id: 'chemical-plants',
     title: 'Chemical & Fertilizer Plants',
     description: 'Prilling towers, chemical reaction vessel platforms, and corrosive chemical storage warehouses.',
-    imageUrl: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80',
+    imageUrl: '/images/project_peb_site_erection.jpg',
     focusAreas: ['Acid-Resistant Coatings', 'Bulk Storage Portals', 'Vessel Support Platforms']
   },
   {
     id: 'cement-plants',
     title: 'Cement Plants',
     description: 'Preheater towers, clinker silos, kiln foundations, and raw material conveyor galleries.',
-    imageUrl: 'https://images.unsplash.com/photo-1574958269340-fa927304f208?auto=format&fit=crop&w=800&q=80',
+    imageUrl: '/images/project_mass_raft_rcc.jpg',
     focusAreas: ['Slipform Concrete Silos', 'Vibratory Mill Foundations', 'Dynamic Kiln Piers']
   },
   {
     id: 'water-wastewater',
     title: 'Water & Wastewater',
     description: 'Sewage treatment plants (STP up to 215 MLD), water treatment plants (up to 45 MLD), and intake wells.',
-    imageUrl: 'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80',
+    imageUrl: '/images/project_water_treatment_stp.jpg',
     focusAreas: ['Liquid Retaining Tanks (IS 3370)', 'Aeration Basins & Clarifiers', 'Underground Pump Houses']
   },
   {
