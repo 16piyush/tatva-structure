@@ -245,7 +245,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     scope: 'Structural steel GA and foundation drawings.',
     specs: '94,080 sqft Manufacturing & Storage Facility',
     highlights: ['Structural Steel GA', 'Heavy equipment foundation', 'Fabrication detailing'],
-    imageUrl: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/project_peb_warehouse_3d.jpg',
     tag: 'Warehouse / Industrial',
     featured: true
   },
@@ -257,7 +257,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     scope: 'Structural steel GA and foundation drawings.',
     specs: 'G+1 Pre-Engineered Building (PEB)',
     highlights: ['PEB Multi-level Framing', 'Foundation design for heavy racking', 'Complete GA drawings'],
-    imageUrl: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/project_peb_portal_front.jpg',
     tag: 'PEB Industrial'
   },
   {
@@ -268,7 +268,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     scope: 'Structural review of shed according to American codes.',
     specs: '57,000 sqft Industrial Shed (AISC / ASCE Compliance)',
     highlights: ['American Code (AISC/ASCE) compliance review', 'Wind & load combination assessment', 'Structural optimization'],
-    imageUrl: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/project_warehouse_truss_roof.jpg',
     tag: 'Code Compliance Review'
   },
   {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   ShieldCheck, 
   Coins, 
@@ -15,7 +15,68 @@ interface AboutSectionProps {
   onOpenBlueprintModal?: () => void;
 }
 
+const PROJECT_PHOTOS = [
+  {
+    id: 'tekla-cad',
+    title: '3D STRUCTURAL FEA CAD MODEL',
+    shortTitle: '3D TEKLA MODEL',
+    sub: 'STAAD / Tekla Analysis',
+    discipline: 'STRUCTURAL ANALYSIS & FEA',
+    code: 'STAAD / ETABS / TEKLA',
+    detailBadge: 'Technical Drawing Detail #TS-04',
+    description: '3D finite-element coordinate model with member stress analysis, deflection verification, and space-frame curved truss nodes.',
+    image: '/images/project_tekla_cad_model.jpg'
+  },
+  {
+    id: 'peb-erection',
+    title: 'PEB SHED PORTAL FRAME ERECTION',
+    shortTitle: 'SITE ERECTION',
+    sub: 'IS 800 Portal Framing',
+    discipline: 'CIVIL & STRUCTURAL EXECUTION',
+    code: 'IS 800:2007 (PEB)',
+    detailBadge: 'Field Erection Inspection #PEB-01',
+    description: 'Ground erection of high-clearance pre-engineered steel portal frames, anchor bolt alignment, and side masonry enclosures.',
+    image: '/images/project_peb_site_erection.jpg'
+  },
+  {
+    id: 'peb-portal-front',
+    title: 'HIGH-BAY INDUSTRIAL WAREHOUSE',
+    shortTitle: 'PEB PORTAL SPAN',
+    sub: 'Heavy Gable Framing',
+    discipline: 'HEAVY INDUSTRIAL PEB',
+    code: 'IS 875 WIND (ZONE IV)',
+    detailBadge: 'Clear Span Superstructure #CS-02',
+    description: 'Full axial-span portal frames designed for heavy wind uplift, overhead crane movement, and high internal clearance.',
+    image: '/images/project_peb_portal_front.jpg'
+  },
+  {
+    id: 'roof-trusses',
+    title: 'TUBULAR ROOF TRUSS & SKYLIGHTS',
+    shortTitle: 'ROOF TRUSSES',
+    sub: 'Tubular Steel & Skylights',
+    discipline: 'ROOF ENVELOPE & FABRICATION',
+    code: 'IS 4923 / IS 1161',
+    detailBadge: 'Fabricated Roof Truss Detail #RT-03',
+    description: 'High-strength steel tubular roof trusses engineered with natural daylight roof monitors, anti-sag rods, and purlin bracing.',
+    image: '/images/project_warehouse_truss_roof.jpg'
+  },
+  {
+    id: 'peb-warehouse-render',
+    title: 'TURNKEY PEB INDUSTRIAL FACILITY',
+    shortTitle: '3D FACILITY RENDER',
+    sub: 'Turnkey PEB Master Plan',
+    discipline: '3D ARCHITECTURAL & BIM',
+    code: 'BIM LOD 350 / PEB',
+    detailBadge: 'Industrial Facility Layout #IF-05',
+    description: 'Architectural and structural 3D render showcasing wide-span factory shed, front cantilever loading canopy, and access infrastructure.',
+    image: '/images/project_peb_warehouse_3d.jpg'
+  }
+];
+
 export default function AboutSection({ onOpenInquiry, onOpenBlueprintModal }: AboutSectionProps) {
+  const [activePhotoIndex, setActivePhotoIndex] = useState(0);
+  const activePhoto = PROJECT_PHOTOS[activePhotoIndex];
+
   const highlights = [
     {
       title: 'Safe Design',
@@ -110,38 +171,38 @@ export default function AboutSection({ onOpenInquiry, onOpenBlueprintModal }: Ab
           </div>
 
           {/* Right Column: Engineering Visual & Interactive Blueprint Viewer Widget */}
-          <div className="lg:col-span-6 space-y-4">
+          <div className="lg:col-span-6 space-y-3.5">
             
             {/* Primary Visual with Blueprint HUD */}
-            <div className="relative rounded-sm overflow-hidden border border-white/15 bg-[#161C27] shadow-2xl group accent-glow">
+            <div className="relative rounded-sm overflow-hidden border border-white/20 bg-[#161C27] shadow-2xl group accent-glow">
               <img 
-                src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1200&q=85" 
-                alt="Engineering Precision and Structural Framework" 
+                src={activePhoto.image} 
+                alt={activePhoto.title} 
                 referrerPolicy="no-referrer"
-                className="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-80 brightness-95"
+                className="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-102 transition-transform duration-700 brightness-95"
               />
               
               {/* Technical Drawing Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0F141E] via-[#0F141E]/40 to-transparent pointer-events-none" />
-              <div className="absolute inset-0 blueprint-grid opacity-35 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0F141E] via-[#0F141E]/30 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 blueprint-grid opacity-30 pointer-events-none" />
 
               {/* HUD Graphics on Visual */}
-              <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
-                <div className="bg-[#161C27]/90 border border-white/10 px-3 py-1.5 rounded-sm text-[11px] font-mono-tech text-slate-300 backdrop-blur-md">
-                  <span className="text-[#F27D26] font-bold">DISCIPLINE:</span> STRUCTURAL & FOUNDATION
+              <div className="absolute top-3.5 left-3.5 right-3.5 flex justify-between items-start">
+                <div className="bg-[#161C27]/95 border border-white/20 px-3 py-1.5 rounded-sm text-[11px] font-mono-tech text-slate-200 backdrop-blur-md shadow-md">
+                  <span className="text-[#F27D26] font-bold">DISCIPLINE:</span> {activePhoto.discipline}
                 </div>
-                <div className="bg-white/10 border border-white/20 px-2.5 py-1 rounded-sm text-[10px] font-mono-tech text-white uppercase font-bold backdrop-blur-md">
-                  STAAD / ETABS / TEKLA
+                <div className="bg-[#F27D26]/20 border border-[#F27D26]/60 px-2.5 py-1 rounded-sm text-[10px] font-mono-tech text-[#F27D26] uppercase font-bold backdrop-blur-md">
+                  {activePhoto.code}
                 </div>
               </div>
 
               {/* Floating Technical Blueprint Box */}
-              <div className="absolute bottom-4 left-4 right-4 bg-[#161C27]/95 border border-white/15 p-4 rounded-sm backdrop-blur-lg">
-                <div className="flex items-center justify-between mb-2">
+              <div className="absolute bottom-3.5 left-3.5 right-3.5 bg-[#161C27]/95 border border-white/20 p-3.5 sm:p-4 rounded-sm backdrop-blur-lg">
+                <div className="flex items-center justify-between mb-1.5">
                   <div className="flex items-center space-x-2">
                     <FileCode2 className="w-4 h-4 text-[#F27D26]" />
                     <span className="text-xs font-mono-tech font-bold text-white uppercase tracking-wider">
-                      Technical Drawing Detail #TS-04
+                      {activePhoto.detailBadge}
                     </span>
                   </div>
                   <button 
@@ -152,58 +213,59 @@ export default function AboutSection({ onOpenInquiry, onOpenBlueprintModal }: Ab
                     <Maximize2 className="w-3 h-3" />
                   </button>
                 </div>
-                <div className="text-xs text-slate-300">
-                  Full 3D coordinate-verified drafting covering superstructure, substructure pile caps, seismic cross arms, and fabrication connection detailing.
+                <div className="text-xs text-slate-300 line-clamp-2 leading-relaxed">
+                  {activePhoto.description}
                 </div>
-                <div className="mt-3 flex items-center justify-between pt-2 border-t border-white/10 text-[10px] font-mono-tech text-slate-400 uppercase">
-                  <span>ISO-GRADE PRECISION WORKFLOW</span>
-                  <span className="text-emerald-400 font-bold">ALL MAJOR CODES COMPLIANT</span>
+                <div className="mt-2.5 flex items-center justify-between pt-2 border-t border-white/10 text-[10px] font-mono-tech text-slate-400 uppercase">
+                  <span className="text-white font-bold">{activePhoto.title}</span>
+                  <span className="text-emerald-400 font-bold">VERIFIED PROJECT ASSET</span>
                 </div>
               </div>
             </div>
 
-            {/* 4-Photo Civil Engineering Site Execution Mini-Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
-              {[
-                {
-                  img: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80',
-                  title: 'REBAR & CASTING',
-                  sub: 'IS 13920 Ductility'
-                },
-                {
-                  img: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80',
-                  title: 'STEEL ERECTION',
-                  sub: 'AISC 360 Framing'
-                },
-                {
-                  img: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80',
-                  title: 'METRO VIADUCTS',
-                  sub: 'IRS / IRC 112'
-                },
-                {
-                  img: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=600&q=80',
-                  title: 'MASS CONCRETE',
-                  sub: 'IS 3370 Liquid Mat'
-                }
-              ].map((item, idx) => (
-                <div key={idx} className="relative rounded-sm overflow-hidden border border-white/15 group aspect-[4/3] bg-slate-900 shadow-md">
-                  <img 
-                    src={item.img} 
-                    alt={item.title} 
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 brightness-95 group-hover:brightness-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent pointer-events-none" />
-                  <div className="absolute bottom-1.5 left-1.5 right-1.5 text-left pointer-events-none">
-                    <div className="text-[9px] font-mono-tech font-bold text-white uppercase truncate">
-                      {item.title}
-                    </div>
-                    <div className="text-[8px] font-mono-tech text-[#F27D26] font-semibold truncate">
-                      {item.sub}
-                    </div>
-                  </div>
-                </div>
-              ))}
+            {/* 5-Photo Interactive Civil Engineering Project Grid */}
+            <div className="space-y-1.5">
+              <div className="flex items-center justify-between text-[11px] font-mono-tech text-slate-400 px-0.5">
+                <span className="flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#F27D26]" />
+                  <span>PROJECT GALLERY (CLICK TO VIEW)</span>
+                </span>
+                <span className="text-[#F27D26] font-bold">
+                  {activePhotoIndex + 1} OF {PROJECT_PHOTOS.length}
+                </span>
+              </div>
+              <div className="grid grid-cols-5 gap-2">
+                {PROJECT_PHOTOS.map((item, idx) => {
+                  const isSelected = idx === activePhotoIndex;
+                  return (
+                    <button
+                      key={item.id}
+                      onClick={() => setActivePhotoIndex(idx)}
+                      className={`relative rounded-sm overflow-hidden text-left transition-all duration-300 aspect-[4/3] bg-slate-950 cursor-pointer group ${
+                        isSelected 
+                          ? 'ring-2 ring-[#F27D26] border border-[#F27D26] scale-102 shadow-lg shadow-[#F27D26]/20' 
+                          : 'border border-white/15 opacity-70 hover:opacity-100 hover:border-white/40'
+                      }`}
+                    >
+                      <img 
+                        src={item.image} 
+                        alt={item.title} 
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 brightness-95"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent pointer-events-none" />
+                      <div className="absolute bottom-1 left-1 right-1 pointer-events-none">
+                        <div className="text-[8px] sm:text-[9px] font-mono-tech font-bold text-white uppercase truncate">
+                          {item.shortTitle}
+                        </div>
+                      </div>
+                      {isSelected && (
+                        <div className="absolute top-1 right-1 w-2 h-2 rounded-full bg-[#F27D26]" />
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
             {/* Quick Consultation Ribbon */}

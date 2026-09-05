@@ -58,8 +58,8 @@ const CAROUSEL_SLIDES: SlideItem[] = [
     titlePart2: '& PEB STRUCTURES',
     subtitle: '100,000+ SQ.FT MANUFACTURING SHEDS, CRANE GIRDERS & STORAGE SILOS',
     description: 'High-precision structural design of massive manufacturing facilities, long-span Pre-Engineered Buildings (PEB), heavy gantry crane supporting systems, and dynamic machine foundation mats.',
-    bgImage: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=85',
-    siteLabel: 'HEAVY STEEL FABRICATION & PEB SHED',
+    bgImage: '/images/project_peb_warehouse_3d.jpg',
+    siteLabel: '100,000+ SQ.FT PEB INDUSTRIAL FACILITY',
     stats: [
       { value: '100K+', label: 'SQ.FT PEB SHEDS' },
       { value: 'IS 800', label: '& AISC 360 CODES' },
@@ -69,6 +69,26 @@ const CAROUSEL_SLIDES: SlideItem[] = [
     specPills: ['High Crane Gantry Design', 'Dynamic Machine Bases', 'STAAD.Pro 3D Models', 'Structural Steel Optimization'],
     inquirySubject: 'Industrial & PEB Structural Design Inquiry',
     sectionTarget: 'projects'
+  },
+  {
+    id: 'peb-site-execution',
+    categoryTag: 'SITE EXECUTION & STEEL ERECTION',
+    categoryIcon: Layers,
+    titlePart1: 'PEB PORTAL FRAMING',
+    titlePart2: '& SITE EXECUTION',
+    subtitle: 'HEAVY PORTAL RAFTERS, HIGH-BAY GABLES, PURLIN NETWORKS & ROOF TRUSSES',
+    description: 'Direct field engineering oversight for structural steel erection, anchor bolt coordinate survey, high-tensile connection torquing, and integrated tubular roof trussing with natural daylight skylights.',
+    bgImage: '/images/project_peb_site_erection.jpg',
+    siteLabel: 'LIVE PEB ERECTION & PORTAL FRAME SITE',
+    stats: [
+      { value: 'IS 800', label: 'PEB CODE DESIGN' },
+      { value: 'HIGH-BAY', label: 'CLEAR SPAN GABLES' },
+      { value: 'TUBULAR', label: 'ROOF TRUSS SYSTEMS' },
+      { value: 'ON-SITE', label: 'ERECTION OVERSIGHT' }
+    ],
+    specPills: ['Anchor Bolt Verification', 'Rafter Erection Sequences', 'Tubular Truss Fabrication', 'Wind Uplift Bracing'],
+    inquirySubject: 'PEB Structural Erection & Fabrication Consultation',
+    sectionTarget: 'site-gallery'
   },
   {
     id: 'metro-viaducts',
@@ -291,20 +311,19 @@ export default function HeroCarousel({
                 src={slide.bgImage} 
                 alt={slide.titlePart1 + ' ' + slide.titlePart2} 
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-cover object-center transition-transform duration-[7000ms] ease-out transform brightness-[0.75] contrast-[1.15]"
+                className="w-full h-full object-cover object-center transition-transform duration-[7000ms] ease-out transform brightness-110 contrast-105 saturate-110"
                 style={{
-                  transform: isActive ? 'scale(1.06)' : 'scale(1.0)'
+                  transform: isActive ? 'scale(1.05)' : 'scale(1.0)'
                 }}
               />
-              {/* Dynamic multi-directional gradient: darker on the left for text contrast, open on the right for structural photo visibility */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0F141E] via-[#0F141E]/85 to-[#0F141E]/40" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0F141E] via-transparent to-[#0F141E]/70" />
-              <div className="absolute inset-0 bg-gradient-to-b from-[#0F141E]/80 via-transparent to-[#0F141E]" />
+              {/* Lighter, high-clarity scrim: transparent on the right & center so the bright photo is clearly visible, gentle left fade for text legibility */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0F141E]/80 via-[#0F141E]/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#0F141E]/45 via-transparent to-[#0F141E]/60" />
             </div>
           );
         })}
-        {/* Persistent Technical Blueprint Grid */}
-        <div className="absolute inset-0 blueprint-grid pointer-events-none opacity-25 z-10" />
+        {/* Subtle Technical Blueprint Grid */}
+        <div className="absolute inset-0 blueprint-grid pointer-events-none opacity-15 z-10" />
       </div>
 
       {/* Decorative Glow Orbs & Architectural Accents */}
@@ -505,7 +524,7 @@ export default function HeroCarousel({
                   src={currentSlide.bgImage} 
                   alt={currentSlide.siteLabel}
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover object-center group-hover/img:scale-105 transition-transform duration-500 brightness-95" 
+                  className="w-full h-full object-cover object-center group-hover/img:scale-105 transition-transform duration-500 brightness-105 contrast-105" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#161C27] via-transparent to-transparent pointer-events-none" />
                 <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between text-[9px] font-mono-tech">

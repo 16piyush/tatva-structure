@@ -27,15 +27,59 @@ interface CivilPhoto {
 
 const CIVIL_GALLERY_PHOTOS: CivilPhoto[] = [
   {
-    id: 'photo-steel-shed',
-    title: 'Heavy Structural Steel Erection & PEB Sheds',
+    id: 'photo-steel-shed-portal',
+    title: 'PEB Industrial Shed Portal Frame Erection',
     category: 'steel',
     categoryLabel: 'INDUSTRIAL STEEL & PEB',
-    location: 'Delhi NCR / Gujarat',
-    specs: '100,000+ Sq.Ft. Span | 50T Gantry Crane Beams',
-    description: 'Long-span structural steel framing with precision moment connections, high-tonnage gantry girders, and optimized steel tonnage under IS 800 and AISC 360.',
-    imageUrl: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
-    codeStandard: 'IS 800:2007 / AISC 360'
+    location: 'Heavy Industrial Corridor / Delhi NCR',
+    specs: 'Clear Span Portal Frames | Heavy Brickwork Enclosure',
+    description: 'On-site execution of high-clearance pre-engineered structural steel portal frames, heavy rafter bolting, anchor bolt survey, and side brick perimeter masonry.',
+    imageUrl: '/images/project_peb_site_erection.jpg',
+    codeStandard: 'IS 800:2007 (PEB) / AISC 360'
+  },
+  {
+    id: 'photo-warehouse-portal-corridor',
+    title: 'High-Bay Industrial Warehouse Portal Span',
+    category: 'steel',
+    categoryLabel: 'INDUSTRIAL STEEL & PEB',
+    location: 'Logistics Park & Manufacturing Hub',
+    specs: 'High Ridge Apex | Longitudinal Multi-Bay Portal Framing',
+    description: 'Longitudinal interior view of pre-engineered building portal frames with high-capacity steel racks, machine foundations, and heavy seismic cross-bracing.',
+    imageUrl: '/images/project_peb_portal_front.jpg',
+    codeStandard: 'IS 875 Wind Zone IV / IS 1893'
+  },
+  {
+    id: 'photo-warehouse-truss-roof',
+    title: 'Tubular Steel Roof Trusses & Natural Skylights',
+    category: 'steel',
+    categoryLabel: 'INDUSTRIAL STEEL & PEB',
+    location: 'Factory Shed Complex',
+    specs: 'Tubular Roof Trusses | Polycarbonate Skylight Integration',
+    description: 'Lightweight hollow structural section (HSS) roof truss grid engineered for distributed gravity loads, natural lighting transmission, and anti-corrosion paint durability.',
+    imageUrl: '/images/project_warehouse_truss_roof.jpg',
+    codeStandard: 'IS 4923 / IS 1161 Tubular Trusses'
+  },
+  {
+    id: 'photo-peb-warehouse-3d-model',
+    title: 'Turnkey PEB Industrial Facility 3D Architectural Model',
+    category: 'steel',
+    categoryLabel: 'INDUSTRIAL STEEL & PEB',
+    location: 'Turnkey Manufacturing Plant',
+    specs: '100,000+ Sq.Ft. Facility | Cantilever Loading Canopy',
+    description: 'Master 3D BIM coordination of modern pre-engineered warehouse facility with cantilever front canopy, heavy transport road circulation, and integrated storm drainage.',
+    imageUrl: '/images/project_peb_warehouse_3d.jpg',
+    codeStandard: 'BIM LOD 350 / PEB Standards'
+  },
+  {
+    id: 'photo-tekla-fea-model',
+    title: '3D FEA Structural Model & Curved Truss Wireframe',
+    category: 'steel',
+    categoryLabel: 'INDUSTRIAL STEEL & PEB',
+    location: 'Tatva Structura Design Studio',
+    specs: 'Finite Element Analysis | Tekla & STAAD.Pro Verification',
+    description: 'Complete 3D structural analysis verifying curved truss geometry, nodal displacements, dynamic modal frequencies, and steel tonnage optimization.',
+    imageUrl: '/images/project_tekla_cad_model.jpg',
+    codeStandard: 'STAAD.Pro / Tekla Structures / FEA'
   },
   {
     id: 'photo-metro-viaduct',
