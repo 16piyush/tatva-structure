@@ -55,20 +55,20 @@ export default function Footer({ onOpenInquiry }: FooterProps) {
           
           {/* Col 1: Brand & Tagline */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-11 h-11 bg-white p-1 rounded-sm shadow-md border border-white/20 flex items-center justify-center shrink-0">
+            <div className="flex items-center space-x-3.5">
+              <div className="w-14 h-14 bg-white p-1 rounded-sm shadow-md border border-white/20 flex items-center justify-center shrink-0">
                 <img 
-                  src="/images/tatva_structura_mark.svg" 
-                  alt="Tatva Structura Logo" 
+                  src="/images/tatva_structura_logo.svg" 
+                  alt="Tatva Structura" 
                   className="w-full h-full object-contain"
                 />
               </div>
               <div>
-                <div className="text-lg font-black text-white font-heading tracking-wider uppercase">
-                  TATVA <span className="text-[#F27D26]">STRUCTURA</span>
+                <div className="text-xl font-black text-white font-heading tracking-wider uppercase">
+                  TATVA <span className="text-slate-300 font-bold">STRUCTURA</span>
                 </div>
-                <div className="text-[10px] font-mono-tech text-[#F27D26] uppercase tracking-widest font-bold">
-                  YOU THINK WE MAKE
+                <div className="text-[10px] font-mono-tech text-[#E05926] uppercase tracking-widest font-bold">
+                  Structural Design Consultancy
                 </div>
               </div>
             </div>

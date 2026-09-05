@@ -401,15 +401,15 @@ export default function HeroCarousel({
             
             {/* Top Brand Tagline Lead */}
             <div className="flex items-center gap-2.5 sm:gap-3">
-              <div className="w-7 h-7 p-0.5 bg-white rounded-sm border border-white/20 shadow-sm flex items-center justify-center shrink-0">
+              <div className="w-8 h-8 p-0.5 bg-white rounded-sm border border-white/20 shadow-sm flex items-center justify-center shrink-0">
                 <img 
-                  src="/images/tatva_structura_mark.svg" 
-                  alt="Tatva Structura Logo" 
+                  src="/images/tatva_structura_logo.svg" 
+                  alt="Tatva Structura" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="w-5 sm:w-8 h-px bg-[#F27D26]"></div>
-              <span className="text-[#F27D26] uppercase tracking-[0.22em] font-bold text-[10px] sm:text-xs font-mono-tech">
+              <div className="w-5 sm:w-8 h-px bg-[#E05926]"></div>
+              <span className="text-[#E05926] uppercase tracking-[0.22em] font-bold text-[10px] sm:text-xs font-mono-tech">
                 TATVA STRUCTURA &bull; STRUCTURAL DESIGN CONSULTANCY
               </span>
             </div>

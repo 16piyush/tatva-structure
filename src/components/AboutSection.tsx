@@ -117,15 +117,15 @@ export default function AboutSection({ onOpenInquiry, onOpenBlueprintModal }: Ab
         
         {/* Section Header Eyebrow */}
         <div className="flex items-center gap-3 sm:gap-4 mb-4">
-          <div className="w-8 h-8 p-1 bg-white rounded-sm border border-white/20 shadow-sm flex items-center justify-center shrink-0">
+          <div className="w-9 h-9 p-0.5 bg-white rounded-sm border border-white/20 shadow-sm flex items-center justify-center shrink-0">
             <img 
-              src="/images/tatva_structura_mark.svg" 
-              alt="Tatva Structura Emblem" 
+              src="/images/tatva_structura_logo.svg" 
+              alt="Tatva Structura" 
               className="w-full h-full object-contain"
             />
           </div>
-          <div className="w-8 h-px bg-[#F27D26]"></div>
-          <span className="text-[#F27D26] uppercase tracking-[0.3em] font-bold text-xs font-mono-tech">
+          <div className="w-8 h-px bg-[#E05926]"></div>
+          <span className="text-[#E05926] uppercase tracking-[0.3em] font-bold text-xs font-mono-tech">
             ABOUT TATVA STRUCTURA &bull; YOU THINK WE MAKE
           </span>
         </div>

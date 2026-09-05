@@ -114,19 +114,19 @@ export default function Navbar({ onOpenInquiry, onOpenBlueprint }: NavbarProps) 
             className="flex items-center space-x-3 group"
             id="brand-logo-link"
           >
-            <div className="w-11 h-11 bg-white p-1 rounded-sm shadow-md border border-white/20 flex items-center justify-center shrink-0 group-hover:border-[#F27D26] transition-all">
+            <div className="h-12 w-12 bg-white p-1 rounded-sm shadow-md border border-white/20 flex items-center justify-center shrink-0 group-hover:border-[#E05926] transition-all">
               <img 
-                src="/images/tatva_structura_mark.svg" 
-                alt="Tatva Structura Emblem" 
+                src="/images/tatva_structura_logo.svg" 
+                alt="Tatva Structura" 
                 className="w-full h-full object-contain"
               />
             </div>
             <div>
               <div className="text-xl sm:text-2xl font-black tracking-widest text-white font-heading uppercase flex items-center space-x-1.5">
                 <span>TATVA</span>
-                <span className="text-[#F27D26]">STRUCTURA</span>
+                <span className="text-slate-200 font-bold">STRUCTURA</span>
               </div>
-              <div className="text-[9px] tracking-[0.3em] uppercase font-mono-tech text-slate-400 group-hover:text-slate-300 transition-colors">
+              <div className="text-[9px] tracking-[0.25em] uppercase font-mono-tech text-slate-400 group-hover:text-slate-300 transition-colors">
                 Structural Design Consultancy
               </div>
             </div>
