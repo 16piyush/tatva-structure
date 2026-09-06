@@ -1,68 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
-  <!-- Clean solid white background matching unnamed.png -->
-  <rect width="400" height="400" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <!-- Clean white background card matching screenshot -->
+  <rect width="500" height="500" fill="#FFFFFF" />
 
-  <!-- OFFICIAL EMBLEM (Exact Geometric Construction of unnamed.png) -->
-  <g>
-    <!-- 1. Orange Foundation House (Bottom-Left) -->
-    <polygon points="142,192 142,160 165,145 188,160 188,192" fill="#DF5928" />
-
-    <!-- 2. Outer Deep Navy Framework (Gable Roof & Right Pier) -->
-    <path 
-      d="
-        M 142,126
-        L 142,88
-        L 200,52
-        L 258,88
-        L 258,192
-        L 238,192
-        L 238,100
-        L 200,76
-        L 162,100
-        L 162,126
-        Z
-      " 
-      fill="#0B253D" 
+  <!-- EMBLEM -->
+  <g id="tatva-emblem">
+    <!-- 1. ORANGE FOUNDATION HOUSE (Solid terracotta orange at bottom left) -->
+    <polygon 
+      points="173,225 173,184 202.5,166 232,184 232,225" 
+      fill="#DE5826" 
     />
 
-    <!-- 3. Inner Deep Navy Structural 'S' Monogram -->
+    <!-- 2. OUTER NAVY GABLE ROOF & RIGHT WALL (Stroke-based for exact uniform width) -->
     <path 
       d="
-        M 178,110
-        L 200,96
-        L 226,112
-        L 226,132
-        L 208,120
-        L 188,133
-        L 188,154
-        L 210,168
-        L 230,155
-        L 230,138
-        L 218,146
-        L 204,136
-        L 204,127
-        L 218,118
-        L 242,133
-        L 242,104
-        L 200,78
-        L 158,104
-        L 158,122
-        L 178,110
-        Z
+        M 181.25,152
+        L 181.25,119.5
+        L 250,76.5
+        L 318.75,119.5
+        L 318.75,216.75
       " 
-      fill="#0B253D" 
+      fill="none" 
+      stroke="#0C2340" 
+      stroke-width="16.5" 
+      stroke-linejoin="miter" 
+      stroke-miterlimit="4" 
+      stroke-linecap="square" 
     />
 
-    <!-- 4. Bottom-Right Baseline Solid Support -->
-    <polygon points="188,192 258,192 258,176 216,176 198,188" fill="#0B253D" />
+    <!-- 3. INTERLOCKING NAVY STRUCTURAL "S" RIBBON -->
+    <path 
+      d="
+        M 205,134.5
+        L 250,106
+        L 289.5,131
+        L 289.5,166
+        L 248.5,191.5
+        L 248.5,216.75
+        L 318.75,216.75
+      " 
+      fill="none" 
+      stroke="#0C2340" 
+      stroke-width="16.5" 
+      stroke-linejoin="miter" 
+      stroke-miterlimit="4" 
+      stroke-linecap="square" 
+    />
   </g>
 
-  <!-- OFFICIAL TYPOGRAPHY (Pixel-perfect vectors & font stack) -->
-  <g text-anchor="middle" font-family="'Montserrat', 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif">
-    <!-- TATVA -->
-    <text x="200" y="264" font-size="48" font-weight="900" fill="#0B253D" letter-spacing="0.09em">TATVA</text>
+  <!-- TYPOGRAPHY -->
+  <g text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Arial, Montserrat, Helvetica, sans-serif">
+    <!-- TATVA in heavy bold navy uppercase -->
+    <text x="250" y="286" font-size="52" font-weight="900" fill="#0C2340" letter-spacing="4px">TATVA</text>
     
-    <!-- STRUCTURA -->
-    <text x="204" y="304" font-size="21" font-weight="700" fill="#253B4E" letter-spacing="0.28em">STRUCTURA</text>
+    <!-- STRUCTURA in tracking slate uppercase -->
+    <text x="252" y="322" font-size="19" font-weight="700" fill="#4B5868" letter-spacing="6.8px">STRUCTURA</text>
   </g>
 </svg>

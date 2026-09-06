@@ -58,7 +58,7 @@ export default function Footer({ onOpenInquiry }: FooterProps) {
             <div className="flex items-center">
               <div className="w-20 h-20 bg-white p-1 rounded-sm shadow-md border border-white/20 flex items-center justify-center shrink-0">
                 <img 
-                  src="/images/tatva_structura_logo.svg" 
+                  src="/images/tatva_structura_logo.png?v=2" 
                   alt="Tatva Structura" 
                   className="w-full h-full object-contain"
                 />

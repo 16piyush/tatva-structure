@@ -1,36 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
   <rect width="128" height="128" rx="20" fill="#FFFFFF" />
-  <rect width="128" height="128" rx="20" fill="none" stroke="#CBD5E1" stroke-width="2" />
-  <g transform="translate(64, 60) scale(0.92)">
-    <polygon points="-50,60 -50,28 -31,14 -12,28 -12,60" fill="#E05926" />
-    <path 
-      d="M -50,6 L -50,-18 L 0,-52 L 50,-18 L 50,60 L 32,60 L 32,-8 L 0,-29 L -32,-8 L -32,6 Z" 
-      fill="#0D2840" 
-    />
-    <path 
-      d="M -18,-2 
-         L 0,-14 
-         L 22,1 
-         L 22,16 
-         L 6,6 
-         L -14,20 
-         L -14,38 
-         L 6,52 
-         L 24,39 
-         L 24,24 
-         L 13,32 
-         L 0,23 
-         L 0,14 
-         L 16,3 
-         L 34,15 
-         L 34,-9 
-         L 0,-32 
-         L -34,-9 
-         L -34,6 
-         L -18,-5 
-         Z" 
-      fill="#0D2840" 
-    />
-    <polygon points="-2,60 50,60 50,48 14,48 2,56" fill="#0D2840" />
+  <g transform="translate(64, 64) scale(0.65)">
+    <g transform="translate(-250, -175)">
+      <!-- Orange House -->
+      <polygon points="173,225 173,184 202.5,166 232,184 232,225" fill="#DE5826" />
+      
+      <!-- Outer Navy Gable -->
+      <path d="M 181.25,152 L 181.25,119.5 L 250,76.5 L 318.75,119.5 L 318.75,216.75" fill="none" stroke="#0C2340" stroke-width="16.5" stroke-linejoin="miter" stroke-miterlimit="4" stroke-linecap="square" />
+      
+      <!-- Navy S Ribbon -->
+      <path d="M 205,134.5 L 250,106 L 289.5,131 L 289.5,166 L 248.5,191.5 L 248.5,216.75 L 318.75,216.75" fill="none" stroke="#0C2340" stroke-width="16.5" stroke-linejoin="miter" stroke-miterlimit="4" stroke-linecap="square" />
+    </g>
   </g>
 </svg>

@@ -1,24 +1,11 @@
-import React, { useState, useEffect, useRef, useCallback, ElementType } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { 
   ArrowRight, 
   ChevronLeft, 
   ChevronRight, 
-  Pause, 
-  Play, 
-  Layers, 
-  Building2, 
-  Cpu, 
   ExternalLink,
-  TrainTrack,
-  Droplets,
-  Zap,
-  Globe2,
-  Factory,
-  CheckCircle2,
   FileCode2,
-  Compass,
-  PhoneCall,
-  LucideIcon
+  PhoneCall
 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/companyData';
 
@@ -31,197 +18,65 @@ interface HeroCarouselProps {
 
 interface SlideItem {
   id: string;
-  categoryTag: string;
-  categoryIcon: LucideIcon | ElementType;
-  titlePart1: string;
-  titlePart2: string;
-  subtitle: string;
-  description: string;
   bgImage: string;
-  siteLabel: string;
-  stats: {
-    value: string;
-    label: string;
-  }[];
-  specPills: string[];
-  inquirySubject: string;
-  sectionTarget: string;
+  title: string;
 }
 
 const CAROUSEL_SLIDES: SlideItem[] = [
   {
     id: 'industrial-peb',
-    categoryTag: 'INDUSTRIAL & STEEL INFRASTRUCTURE',
-    categoryIcon: Factory,
-    titlePart1: 'HEAVY INDUSTRIAL',
-    titlePart2: '& PEB STRUCTURES',
-    subtitle: '100,000+ SQ.FT MANUFACTURING SHEDS, CRANE GIRDERS & STORAGE SILOS',
-    description: 'High-precision structural design of massive manufacturing facilities, long-span Pre-Engineered Buildings (PEB), heavy gantry crane supporting systems, and dynamic machine foundation mats.',
     bgImage: '/images/project_peb_warehouse_3d.jpg',
-    siteLabel: '100,000+ SQ.FT PEB INDUSTRIAL FACILITY',
-    stats: [
-      { value: '100K+', label: 'SQ.FT PEB SHEDS' },
-      { value: 'IS 800', label: '& AISC 360 CODES' },
-      { value: 'FEA', label: 'FINITE ELEMENT SIM' },
-      { value: 'FAB-READY', label: 'GA & BBS DRAWINGS' }
-    ],
-    specPills: ['High Crane Gantry Design', 'Dynamic Machine Bases', 'STAAD.Pro 3D Models', 'Structural Steel Optimization'],
-    inquirySubject: 'Industrial & PEB Structural Design Inquiry',
-    sectionTarget: 'projects'
+    title: 'Heavy Industrial & PEB Structures'
   },
   {
     id: 'peb-site-execution',
-    categoryTag: 'SITE EXECUTION & STEEL ERECTION',
-    categoryIcon: Layers,
-    titlePart1: 'PEB PORTAL FRAMING',
-    titlePart2: '& SITE EXECUTION',
-    subtitle: 'HEAVY PORTAL RAFTERS, HIGH-BAY GABLES, PURLIN NETWORKS & ROOF TRUSSES',
-    description: 'Direct field engineering oversight for structural steel erection, anchor bolt coordinate survey, high-tensile connection torquing, and integrated tubular roof trussing with natural daylight skylights.',
     bgImage: '/images/project_peb_site_erection.jpg',
-    siteLabel: 'LIVE PEB ERECTION & PORTAL FRAME SITE',
-    stats: [
-      { value: 'IS 800', label: 'PEB CODE DESIGN' },
-      { value: 'HIGH-BAY', label: 'CLEAR SPAN GABLES' },
-      { value: 'TUBULAR', label: 'ROOF TRUSS SYSTEMS' },
-      { value: 'ON-SITE', label: 'ERECTION OVERSIGHT' }
-    ],
-    specPills: ['Anchor Bolt Verification', 'Rafter Erection Sequences', 'Tubular Truss Fabrication', 'Wind Uplift Bracing'],
-    inquirySubject: 'PEB Structural Erection & Fabrication Consultation',
-    sectionTarget: 'site-gallery'
+    title: 'PEB Portal Framing & Site Execution'
   },
   {
     id: 'concrete-highrise',
-    categoryTag: 'RCC & TOWER CRANE CIVIL CASTING',
-    categoryIcon: Building2,
-    titlePart1: 'MASS RAFT & RCC',
-    titlePart2: 'HIGH-RISE FRAMING',
-    subtitle: '2.5M THICK MASS RAFT FOUNDATIONS, SHEAR WALLS & SEISMIC DUCTILITY',
-    description: 'High-rise residential and commercial tower structural engineering with thermal crack-width mitigation for mass concrete pours, rebar detailing under IS 13920, and dual-system core shear wall design.',
     bgImage: '/images/project_mass_raft_rcc.jpg',
-    siteLabel: 'MASS CONCRETE RAFT & TOWER CRANE SITE',
-    stats: [
-      { value: 'M50 GRADE', label: 'HIGH-STRENGTH RCC' },
-      { value: 'IS 13920', label: 'DUCTILE DETAILING' },
-      { value: 'ETABS 3D', label: 'NON-LINEAR P-DELTA' },
-      { value: 'ZONE V', label: 'SEISMIC RESILIENT' }
-    ],
-    specPills: ['Mass Concrete Thermal Checks', 'Core Shear Wall Detailing', 'Transfer Girder Analysis', 'Rebar Congestion Optimization'],
-    inquirySubject: 'High-Rise RCC & Foundation Structural Inquiry',
-    sectionTarget: 'expertise'
+    title: 'Mass Raft & RCC High-Rise Framing'
   },
   {
     id: 'water-stp',
-    categoryTag: 'WATER & WASTEWATER INFRASTRUCTURE',
-    categoryIcon: Droplets,
-    titlePart1: '215 MLD WATER &',
-    titlePart2: 'SEWAGE PLANTS (STP)',
-    subtitle: 'OKHLA STP NEW DELHI, AEROBIC DIGESTERS & DEEP WATER INTAKE WELLS',
-    description: 'Heavy reinforced concrete hydraulic design for 215 MLD wastewater treatment facilities, circular clariflocculators, aerobic digesters, pump houses, and deep retention intake structures conforming to IS 3370 liquid retaining criteria.',
     bgImage: '/images/project_water_treatment_stp.jpg',
-    siteLabel: '215 MLD OKHLA STP & LIQUID TANKS',
-    stats: [
-      { value: '215 MLD', label: 'LARGEST STP ASSET' },
-      { value: 'IS 3370', label: 'LIQUID CRACK WIDTH' },
-      { value: 'DEEP MAT', label: 'HYDROSTATIC BASES' },
-      { value: '100% WATER', label: 'TIGHT INTEGRITY' }
-    ],
-    specPills: ['Crack Width < 0.1mm', 'Hydrodynamic Pressure Analysis', 'Uplift & Buoyancy Safety', 'Deep Soil Shoring'],
-    inquirySubject: 'Water / Sewage Treatment Plant (STP) Design Inquiry',
-    sectionTarget: 'expertise'
+    title: '215 MLD Water & Sewage Treatment Plants'
   },
   {
     id: 'power-substations',
-    categoryTag: 'POWER STATIONS & SPECIAL STRUCTURES',
-    categoryIcon: Zap,
-    titlePart1: 'POWER STATIONS &',
-    titlePart2: 'GIS SUBSTATIONS',
-    subtitle: '85M TALL CHIMNEYS, TURBINE FOUNDATIONS & 400KV GIS BUILDINGS',
-    description: 'High-complexity structural solutions for thermal power generation assets, 85-meter industrial chimneys for NBCC, heavy dynamic vibrating turbine foundations, and 400kV gas-insulated substations vetted by AECOM.',
     bgImage: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=2000&q=85',
-    siteLabel: '400KV GIS SUBSTATION & POWER ASSETS',
-    stats: [
-      { value: '85M TALL', label: 'RCC CHIMNEYS' },
-      { value: '400 KV', label: 'GIS SUBSTATIONS' },
-      { value: 'AECOM', label: 'VETTED DESIGNS' },
-      { value: 'VIBRATION', label: 'IS 2974 MACHINE MAT' }
-    ],
-    specPills: ['Resonance Avoidance Analysis', 'Thermal Expansion Relief', 'Blast & Fire Resistance', 'High Wind Aero Shedding'],
-    inquirySubject: 'Power & Substation Facility Structural Design Inquiry',
-    sectionTarget: 'expertise'
-  },
-  {
-    id: 'global-consultancy',
-    categoryTag: 'GLOBAL REACH & MULTI-CODE ENGINEERING',
-    categoryIcon: Globe2,
-    titlePart1: 'CROSS-BORDER',
-    titlePart2: 'GLOBAL CONSULTANCY',
-    subtitle: 'PROJECTS IN ETHIOPIA, UAE & UNITED KINGDOM ACCORDING TO EUROCODES & ACI',
-    description: 'Turnkey structural consultancy delivering projects worldwide in accordance with British Standards (BS), Eurocodes (EN 1991-1993), American Concrete Institute (ACI 318), AISC 360, and Abu Dhabi International Building Codes.',
-    bgImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=85',
-    siteLabel: 'INTERNATIONAL HIGH-RISE & EDIBLE OIL PLANTS',
-    stats: [
-      { value: 'EUROCODES', label: 'EN 1991 / 1992 / 1993' },
-      { value: 'ACI / AISC', label: 'US CODE COMPLIANCE' },
-      { value: 'ADIBC', label: 'UAE BUILDING CODES' },
-      { value: 'BS 5950', label: 'BRITISH STANDARDS' }
-    ],
-    specPills: ['Multi-Currency Execution', 'BIM LOD 350 Deliverables', 'Remote Peer Reviews', 'International Statutory Compliance'],
-    inquirySubject: 'International Structural Design Consultation',
-    sectionTarget: 'international'
+    title: 'Power Stations & Substations'
   }
 ];
 
-const AUTOPLAY_INTERVAL = 4500; // 4.5 seconds per slide for responsive auto-run
+const AUTOPLAY_INTERVAL = 5000;
 
 export default function HeroCarousel({ 
   onOpenInquiry, 
   onOpenBlueprint, 
-  onExploreExpertise, 
-  onViewProjects 
 }: HeroCarouselProps) {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [progress, setProgress] = useState(0);
-
-  const currentSlide = CAROUSEL_SLIDES[currentSlideIndex];
 
   const goToNextSlide = useCallback(() => {
     setCurrentSlideIndex((prev) => (prev + 1) % CAROUSEL_SLIDES.length);
-    setProgress(0);
   }, []);
 
   const goToPrevSlide = useCallback(() => {
     setCurrentSlideIndex((prev) => (prev - 1 + CAROUSEL_SLIDES.length) % CAROUSEL_SLIDES.length);
-    setProgress(0);
   }, []);
 
   const goToSlide = (index: number) => {
     setCurrentSlideIndex(index);
-    setProgress(0);
   };
 
-  // Continuous auto-run loop with animated progress tracking
   useEffect(() => {
-    if (!isPlaying) return;
-
-    const stepTime = 50; // update progress every 50ms
-    const totalSteps = AUTOPLAY_INTERVAL / stepTime;
-    let stepCount = 0;
-
-    const progressInterval = setInterval(() => {
-      stepCount++;
-      setProgress((stepCount / totalSteps) * 100);
-    }, stepTime);
-
-    const slideTimer = setTimeout(() => {
+    const slideTimer = setInterval(() => {
       goToNextSlide();
     }, AUTOPLAY_INTERVAL);
 
-    return () => {
-      clearInterval(progressInterval);
-      clearTimeout(slideTimer);
-    };
-  }, [currentSlideIndex, isPlaying, goToNextSlide]);
+    return () => clearInterval(slideTimer);
+  }, [goToNextSlide]);
 
   const handleActionNavigation = (targetId: string = 'services') => {
     const el = document.getElementById(targetId);
@@ -235,7 +90,7 @@ export default function HeroCarousel({
   return (
     <section 
       id="home" 
-      className="relative overflow-hidden bg-[#0F141E] border-b border-white/10 select-none"
+      className="relative overflow-hidden bg-[#0F141E] border-b border-white/10 select-none min-h-[75vh] lg:min-h-[85vh] flex items-center"
     >
       {/* Background Image Carousel Layers with Crossfade */}
       <div className="absolute inset-0 z-0">
@@ -250,16 +105,16 @@ export default function HeroCarousel({
             >
               <img 
                 src={slide.bgImage} 
-                alt={slide.titlePart1 + ' ' + slide.titlePart2} 
+                alt={slide.title} 
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-cover object-center transition-transform duration-[7000ms] ease-out transform brightness-110 contrast-105 saturate-110"
+                className="w-full h-full object-cover object-center transition-transform duration-[7000ms] ease-out transform brightness-105 contrast-105"
                 style={{
                   transform: isActive ? 'scale(1.05)' : 'scale(1.0)'
                 }}
               />
-              {/* Lighter, high-clarity scrim: transparent on the right & center so the bright photo is clearly visible, gentle left fade for text legibility */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0F141E]/80 via-[#0F141E]/40 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-b from-[#0F141E]/45 via-transparent to-[#0F141E]/60" />
+              {/* Dark scrim for high-contrast text legibility */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0F141E]/90 via-[#0F141E]/60 to-[#0F141E]/40" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0F141E] via-transparent to-[#0F141E]/60" />
             </div>
           );
         })}
@@ -267,228 +122,123 @@ export default function HeroCarousel({
         <div className="absolute inset-0 blueprint-grid pointer-events-none opacity-15 z-10" />
       </div>
 
-      {/* Decorative Glow Orbs & Architectural Accents */}
-      <div className="absolute top-[-80px] right-[-80px] w-[550px] h-[550px] rounded-full bg-[#F27D26] opacity-[0.05] blur-[140px] pointer-events-none z-10" />
-      <div className="absolute bottom-[40px] left-[5%] w-[1px] h-[300px] bg-gradient-to-b from-transparent via-[#F27D26] to-transparent opacity-30 pointer-events-none z-10" />
+      {/* Subtle Glow Accent */}
+      <div className="absolute top-[-80px] right-[-80px] w-[500px] h-[500px] rounded-full bg-[#F27D26] opacity-[0.06] blur-[140px] pointer-events-none z-10" />
 
-      {/* Main Carousel Container */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-6 sm:pt-10 sm:pb-8 lg:pt-14 lg:pb-12 min-h-[72vh] lg:min-h-[82vh] flex flex-col justify-between">
-        
-        {/* Top Bar: Slide Indicator / Controls / Play-Pause */}
-        <div className="flex items-center justify-between gap-4 pb-2 border-b border-white/10">
-          
-          {/* Active Sector Tag */}
-          <div className="flex items-center gap-2.5 sm:gap-3">
-            <div className="w-6 sm:w-10 h-px bg-[#F27D26]"></div>
-            <div className="flex items-center gap-2 px-2.5 py-1 rounded-sm bg-[#161C27] border border-[#F27D26]/40 text-[#F27D26] text-[10px] sm:text-xs font-mono-tech uppercase tracking-wider">
-              <currentSlide.categoryIcon className="w-3.5 h-3.5" />
-              <span>{currentSlide.categoryTag}</span>
-            </div>
-          </div>
-
-          {/* Controls: Slide Counter & Nav Buttons */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            {/* Auto-run status tag */}
-            <div className="hidden sm:flex items-center gap-1.5 px-2 py-1 bg-white/5 border border-white/10 rounded-sm text-[10px] font-mono-tech text-slate-300">
-              <span className={`w-2 h-2 rounded-full ${isPlaying ? 'bg-emerald-400 animate-pulse' : 'bg-amber-400'}`} />
-              <span>{isPlaying ? 'AUTO-PLAY' : 'PAUSED'}</span>
-            </div>
-
-            {/* Numerical Slide Counter */}
-            <div className="font-mono-tech text-xs sm:text-sm text-slate-300 px-2 py-1 bg-white/5 border border-white/10 rounded-sm">
-              <span className="text-[#F27D26] font-bold">0{currentSlideIndex + 1}</span>
-              <span className="text-slate-500"> / 0{CAROUSEL_SLIDES.length}</span>
-            </div>
-
-            {/* Play/Pause Toggle */}
-            <button
-              onClick={() => setIsPlaying(!isPlaying)}
-              className="p-1.5 sm:p-2 rounded-sm bg-[#161C27] border border-white/10 text-slate-300 hover:text-white hover:border-[#F27D26] transition-colors cursor-pointer"
-              title={isPlaying ? 'Pause Auto-slide' : 'Play Auto-slide'}
-              aria-label={isPlaying ? 'Pause Carousel' : 'Play Carousel'}
-            >
-              {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5 text-[#F27D26]" />}
-            </button>
-
-            {/* Prev Button */}
-            <button
-              onClick={goToPrevSlide}
-              className="p-1.5 sm:p-2 rounded-sm bg-[#161C27] border border-white/10 text-slate-300 hover:text-white hover:border-[#F27D26] hover:bg-[#F27D26]/20 transition-all cursor-pointer"
-              title="Previous Slide"
-              aria-label="Previous Slide"
-              id="carousel-btn-prev"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </button>
-
-            {/* Next Button */}
-            <button
-              onClick={goToNextSlide}
-              className="p-1.5 sm:p-2 rounded-sm bg-[#161C27] border border-white/10 text-slate-300 hover:text-white hover:border-[#F27D26] hover:bg-[#F27D26]/20 transition-all cursor-pointer"
-              title="Next Slide"
-              aria-label="Next Slide"
-              id="carousel-btn-next"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-
-        {/* Middle Body: Dynamic Hero Headline + Stats + CTAs (Full Width) */}
-        <div className="w-full space-y-4 sm:space-y-5 text-left my-auto py-4 sm:py-6">
+      {/* Main Hero Container */}
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 w-full">
+        <div className="max-w-4xl space-y-6 sm:space-y-8 text-left">
           
           {/* Top Brand Tagline Lead */}
-          <div className="flex items-center gap-2.5 sm:gap-3">
-            <div className="w-8 h-8 p-0.5 bg-white rounded-sm border border-white/20 shadow-sm flex items-center justify-center shrink-0">
+          <div className="flex items-center gap-3 sm:gap-3.5">
+            <div className="w-9 h-9 sm:w-11 sm:h-11 p-1 bg-white rounded-sm border border-white/20 shadow-md flex items-center justify-center shrink-0">
               <img 
-                src="/images/tatva_structura_logo.svg" 
+                src="/images/tatva_structura_logo.png?v=2" 
                 alt="Tatva Structura" 
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="w-5 sm:w-8 h-px bg-[#E05926]"></div>
-            <span className="text-[#E05926] uppercase tracking-[0.22em] font-bold text-[10px] sm:text-xs font-mono-tech">
+            <div className="w-6 sm:w-10 h-0.5 bg-[#F27D26]"></div>
+            <span className="text-[#F27D26] uppercase tracking-[0.25em] font-bold text-xs sm:text-sm font-mono-tech">
               TATVA STRUCTURA &bull; STRUCTURAL DESIGN CONSULTANCY
             </span>
           </div>
 
-          {/* Signature Brand Headline: YOU THINK WE MAKE + Dynamic Sector */}
-          <div className="space-y-1 sm:space-y-1.5">
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] sm:leading-[0.9] tracking-tighter uppercase text-white font-heading">
+          {/* Signature Brand Headline: YOU THINK WE MAKE */}
+          <div>
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.95] sm:leading-[0.9] tracking-tighter uppercase text-white font-heading">
               YOU THINK <br className="hidden sm:inline" />
-              <span className="text-transparent" style={{ WebkitTextStroke: '1.5px #F27D26' }}>
+              <span className="text-transparent" style={{ WebkitTextStroke: '2px #F27D26' }}>
                 WE MAKE
               </span>
             </h1>
-            
-            {/* Dynamic Sector Title & Subtitle */}
-            <div className="pt-1 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
-              <span className="inline-flex items-center gap-1 text-white font-heading font-black text-sm sm:text-lg uppercase tracking-wide bg-[#161C27] border border-[#F27D26]/40 px-2.5 py-0.5 rounded-sm">
-                <span className="text-[#F27D26]">▸</span> {currentSlide.titlePart1} {currentSlide.titlePart2}
-              </span>
-              <span className="text-[11px] sm:text-xs text-slate-300 font-mono-tech uppercase">
-                {currentSlide.subtitle}
-              </span>
-            </div>
           </div>
 
-          {/* Slide Narrative Description */}
-          <p className="text-xs sm:text-sm lg:text-base text-slate-300 max-w-3xl leading-relaxed">
-            {currentSlide.description}
-          </p>
-
-          {/* Technical Specification Pills */}
-          <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-1">
-            {currentSlide.specPills.map((pill) => (
-              <span 
-                key={pill} 
-                className="px-2.5 py-1 bg-white/5 border border-white/10 text-[10px] sm:text-xs font-mono-tech text-slate-300 rounded-sm flex items-center gap-1.5"
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-[#F27D26]" />
-                {pill}
-              </span>
-            ))}
-          </div>
-
-          {/* 4 Technical Metric Stat Boxes */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 pt-1 max-w-3xl">
-            {currentSlide.stats.map((st) => (
-              <div 
-                key={st.label} 
-                className="px-3 sm:px-4 py-2 sm:py-3 bg-[#161C27] border border-white/10 flex flex-col justify-center rounded-sm shadow-sm"
-              >
-                <span className="text-[#F27D26] font-bold text-lg sm:text-2xl font-heading">
-                  {st.value}
-                </span>
-                <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-slate-400 font-mono-tech leading-tight mt-0.5">
-                  {st.label}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          {/* Action Buttons */}
-          <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 pt-2">
+          {/* Action Buttons: EXPLORE DETAILS, INQUIRE NOW, BLUEPRINTS, WHATSAPP */}
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-2 sm:pt-4">
+            {/* Explore Details */}
             <button
               onClick={() => handleActionNavigation('services')}
-              className="w-full sm:w-auto inline-flex items-center justify-center px-4 sm:px-6 py-3 sm:py-3.5 rounded-sm font-bold text-xs sm:text-sm uppercase tracking-wider bg-[#F27D26] text-white hover:bg-[#ff8c38] shadow-lg shadow-[#F27D26]/20 transition-all duration-200 cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-sm font-bold text-xs sm:text-sm uppercase tracking-wider bg-[#F27D26] text-white hover:bg-[#ff8c38] shadow-lg shadow-[#F27D26]/25 transition-all duration-200 cursor-pointer"
               id="carousel-btn-explore"
             >
               <span>EXPLORE DETAILS</span>
-              <ArrowRight className="w-4 h-4 ml-1.5" />
+              <ArrowRight className="w-4 h-4 ml-2" />
             </button>
 
+            {/* Inquire Now */}
             <button
-              onClick={() => onOpenInquiry(currentSlide.inquirySubject)}
-              className="w-full sm:w-auto inline-flex items-center justify-center px-3 sm:px-5 py-3 sm:py-3.5 rounded-sm font-bold text-xs sm:text-sm uppercase tracking-wider bg-[#161C27] text-slate-200 hover:text-white border border-white/10 hover:border-white/30 transition-all duration-200 cursor-pointer"
+              onClick={() => onOpenInquiry('General Structural Design Consultation Inquiry')}
+              className="w-full sm:w-auto inline-flex items-center justify-center px-5 sm:px-7 py-3.5 sm:py-4 rounded-sm font-bold text-xs sm:text-sm uppercase tracking-wider bg-[#161C27] text-slate-200 hover:text-white border border-white/15 hover:border-[#F27D26]/60 shadow-md transition-all duration-200 cursor-pointer"
               id="carousel-btn-inquiry"
             >
-              <ExternalLink className="w-3.5 h-3.5 mr-1.5 text-[#F27D26]" />
+              <ExternalLink className="w-4 h-4 mr-2 text-[#F27D26]" />
               <span>INQUIRE NOW</span>
             </button>
 
+            {/* Blueprint */}
             {onOpenBlueprint && (
               <button
                 onClick={onOpenBlueprint}
-                className="w-full sm:w-auto inline-flex items-center justify-center px-3 sm:px-5 py-3 sm:py-3.5 rounded-sm font-bold text-xs sm:text-sm uppercase tracking-wider bg-white/5 text-slate-300 hover:text-white hover:bg-white/10 border border-white/10 transition-colors cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-5 sm:px-7 py-3.5 sm:py-4 rounded-sm font-bold text-xs sm:text-sm uppercase tracking-wider bg-white/5 text-slate-200 hover:text-white hover:bg-white/10 border border-white/15 hover:border-white/30 transition-all cursor-pointer"
+                id="carousel-btn-blueprint"
               >
-                <Cpu className="w-3.5 h-3.5 mr-1.5 text-[#F27D26]" />
-                <span>BLUEPRINTS</span>
+                <FileCode2 className="w-4 h-4 mr-2 text-[#F27D26]" />
+                <span>BLUEPRINT</span>
               </button>
             )}
 
+            {/* WhatsApp */}
             <a
-              href={`https://wa.me/${COMPANY_INFO.phoneRaw}?text=Hello%20Tatva%20Structura,%20I%20am%20interested%20in%20${encodeURIComponent(currentSlide.inquirySubject)}.`}
+              href={`https://wa.me/${COMPANY_INFO.phoneRaw}?text=Hello%20Tatva%20Structura,%20I%20am%20interested%20in%20structural%20design%20consultation.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-3 sm:px-5 py-3 sm:py-3.5 rounded-sm font-bold text-xs sm:text-sm uppercase tracking-wider text-emerald-400 hover:text-white hover:bg-emerald-950/60 border border-emerald-700/50 transition-colors cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-5 sm:px-7 py-3.5 sm:py-4 rounded-sm font-bold text-xs sm:text-sm uppercase tracking-wider text-emerald-400 hover:text-white hover:bg-emerald-600 bg-emerald-950/40 border border-emerald-500/50 shadow-lg shadow-emerald-950/30 transition-all duration-200 cursor-pointer"
+              id="carousel-btn-whatsapp"
             >
+              <PhoneCall className="w-4 h-4 mr-2" />
               <span>WHATSAPP</span>
             </a>
           </div>
+
         </div>
 
-        {/* Bottom Carousel Selector Bar (Interactive Tabs + Real-Time Progress Bar) */}
-        <div className="pt-2 sm:pt-4 border-t border-white/10">
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2">
-            {CAROUSEL_SLIDES.map((slide, idx) => {
-              const isActive = idx === currentSlideIndex;
-              const Icon = slide.categoryIcon;
-              return (
-                <button
-                  key={slide.id}
-                  onClick={() => goToSlide(idx)}
-                  className={`text-left p-2 sm:p-2.5 rounded-sm border transition-all cursor-pointer relative overflow-hidden flex flex-col justify-between ${
-                    isActive 
-                      ? 'bg-[#161C27] border-[#F27D26] shadow-md shadow-[#F27D26]/10' 
-                      : 'bg-[#161C27]/50 border-white/10 hover:border-white/30 hover:bg-[#161C27]'
-                  }`}
-                  id={`carousel-thumb-${idx}`}
-                >
-                  {/* Active Slide Progress Line */}
-                  {isActive && isPlaying && (
-                    <div 
-                      className="absolute top-0 left-0 bottom-0 bg-[#F27D26]/20 transition-all duration-75 pointer-events-none"
-                      style={{ width: `${progress}%` }}
-                    />
-                  )}
-                  {isActive && (
-                    <div className="absolute top-0 left-0 right-0 h-0.5 bg-[#F27D26]" />
-                  )}
+        {/* Subtle Minimalist Carousel Controls at Bottom */}
+        <div className="flex items-center justify-between pt-12 sm:pt-16 max-w-4xl">
+          {/* Subtle Slide Indicator Dots */}
+          <div className="flex items-center gap-2">
+            {CAROUSEL_SLIDES.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => goToSlide(idx)}
+                className={`h-1.5 transition-all duration-300 rounded-full cursor-pointer ${
+                  idx === currentSlideIndex 
+                    ? 'w-8 bg-[#F27D26]' 
+                    : 'w-2 bg-white/20 hover:bg-white/40'
+                }`}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
+            ))}
+          </div>
 
-                  <div className="flex items-center justify-between mb-1 relative z-10">
-                    <span className={`text-[10px] font-mono-tech font-bold ${isActive ? 'text-[#F27D26]' : 'text-slate-400'}`}>
-                      0{idx + 1}
-                    </span>
-                    <Icon className={`w-3 h-3 ${isActive ? 'text-[#F27D26]' : 'text-slate-400'}`} />
-                  </div>
-
-                  <div className={`text-[11px] sm:text-xs font-bold font-heading uppercase truncate relative z-10 ${isActive ? 'text-white' : 'text-slate-300'}`}>
-                    {slide.titlePart1}
-                  </div>
-                </button>
-              );
-            })}
+          {/* Minimalist Prev/Next Arrows */}
+          <div className="flex items-center gap-2">
+            <button
+              onClick={goToPrevSlide}
+              className="p-2 rounded-sm bg-[#161C27]/80 border border-white/10 text-slate-300 hover:text-white hover:border-[#F27D26] hover:bg-[#F27D26]/20 transition-all cursor-pointer"
+              title="Previous Slide"
+              aria-label="Previous Slide"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              onClick={goToNextSlide}
+              className="p-2 rounded-sm bg-[#161C27]/80 border border-white/10 text-slate-300 hover:text-white hover:border-[#F27D26] hover:bg-[#F27D26]/20 transition-all cursor-pointer"
+              title="Next Slide"
+              aria-label="Next Slide"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
           </div>
         </div>
 

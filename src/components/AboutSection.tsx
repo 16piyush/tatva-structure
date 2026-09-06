@@ -119,7 +119,7 @@ export default function AboutSection({ onOpenInquiry, onOpenBlueprintModal }: Ab
         <div className="flex items-center gap-3 sm:gap-4 mb-4">
           <div className="w-9 h-9 p-0.5 bg-white rounded-sm border border-white/20 shadow-sm flex items-center justify-center shrink-0">
             <img 
-              src="/images/tatva_structura_logo.svg" 
+              src="/images/tatva_structura_logo.png?v=2" 
               alt="Tatva Structura" 
               className="w-full h-full object-contain"
             />

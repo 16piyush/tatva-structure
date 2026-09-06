@@ -1,41 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 130" width="100%" height="100%">
-  <g transform="translate(60, 62)">
-    <!-- Orange Foundation House -->
-    <polygon points="-50,60 -50,28 -31,14 -12,28 -12,60" fill="#E05926" />
-
-    <!-- Outer Deep Navy Framework -->
-    <path 
-      d="M -50,6 L -50,-18 L 0,-52 L 50,-18 L 50,60 L 32,60 L 32,-8 L 0,-29 L -32,-8 L -32,6 Z" 
-      fill="#0D2840" 
-    />
-
-    <!-- Inner Structural 'S' -->
-    <path 
-      d="M -18,-2 
-         L 0,-14 
-         L 22,1 
-         L 22,16 
-         L 6,6 
-         L -14,20 
-         L -14,38 
-         L 6,52 
-         L 24,39 
-         L 24,24 
-         L 13,32 
-         L 0,23 
-         L 0,14 
-         L 16,3 
-         L 34,15 
-         L 34,-9 
-         L 0,-32 
-         L -34,-9 
-         L -34,6 
-         L -18,-5 
-         Z" 
-      fill="#0D2840" 
-    />
-
-    <!-- Bottom Right Base -->
-    <polygon points="-2,60 50,60 50,48 14,48 2,56" fill="#0D2840" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="120 70 245 250" width="100%" height="100%">
+  <g id="emblem">
+    <path d="
+      M 138,314
+      L 138,252
+      L 178,224
+      L 218,252
+      L 218,314
+      Z
+    " fill="#DF5726" />
+    <path d="
+      M 152,216
+      L 152,146
+      L 250,86
+      L 348,146
+      L 348,300
+    " fill="none" stroke="#0C253E" stroke-width="28" stroke-linejoin="miter" stroke-miterlimit="4" stroke-linecap="square" />
+    <path d="
+      M 206,196
+      L 206,157
+      L 250,130
+      L 294,157
+      L 294,218
+      L 250,245
+      L 250,300
+      L 348,300
+    " fill="none" stroke="#0C253E" stroke-width="28" stroke-linejoin="miter" stroke-miterlimit="4" stroke-linecap="square" />
   </g>
 </svg>

@@ -49,60 +49,38 @@ export default function TatvaLogo({
   // The Emblem SVG (Exact replica of Tatva Structura official brand mark)
   const Emblem = ({ className: emblemClass = '' }: { className?: string }) => (
     <svg 
-      viewBox="0 0 120 120" 
+      viewBox="85 45 330 280" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
       className={`${sizeStyles.emblem} ${emblemClass} shrink-0 drop-shadow-sm`}
       aria-label="Tatva Structura Logo Emblem"
     >
-      {/* 1. Orange Mini-House Silhouette (Bottom Left Foundation Block) */}
+      {/* 1. Orange Foundation House (Bottom Left) */}
       <path 
-        d="M 24 100 L 24 74 L 42 62 L 60 74 L 60 100 Z" 
-        fill="#E25822" 
+        d="M 105,318 L 105,250 L 157,216 L 209,250 L 209,318 Z" 
+        fill="#DE5826" 
       />
 
       {/* 2. Navy Blue Outer Gable Roof & Right Wall Framework */}
       <path 
-        d="
-          M 24 58 
-          L 24 40 
-          L 60 16 
-          L 96 40 
-          L 96 100 
-          L 78 100 
-          L 78 46 
-          L 60 34 
-          L 40 48 
-          L 40 58 
-          Z
-        " 
-        fill="#0E2841" 
+        d="M 123,212 L 123,136 L 250,64 L 377,136 L 377,300" 
+        fill="none" 
+        stroke="#0C253E" 
+        strokeWidth="36" 
+        strokeLinejoin="miter" 
+        strokeMiterlimit="4" 
+        strokeLinecap="square" 
       />
 
       {/* 3. Interlocking Geometric 'S' Structural Frame */}
       <path 
-        d="
-          M 40 48 
-          L 60 34 
-          L 80 48 
-          L 80 62 
-          L 62 62 
-          L 62 76 
-          L 80 76 
-          L 80 100 
-          L 60 100 
-          L 60 88 
-          L 70 88 
-          L 70 76 
-          L 50 76 
-          L 50 50 
-          L 70 50 
-          L 70 42 
-          L 60 36 
-          L 48 44 
-          Z
-        " 
-        fill="#0E2841" 
+        d="M 194,204 L 194,154 L 250,122 L 306,154 L 306,216 L 250,248 L 250,300 L 377,300" 
+        fill="none" 
+        stroke="#0C253E" 
+        strokeWidth="36" 
+        strokeLinejoin="miter" 
+        strokeMiterlimit="4" 
+        strokeLinecap="square" 
       />
     </svg>
   );
