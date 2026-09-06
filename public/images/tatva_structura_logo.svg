@@ -1,45 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
-  <!-- Clean white background card matching screenshot -->
+  <!-- Clean white background -->
   <rect width="500" height="500" fill="#FFFFFF" />
 
   <!-- EMBLEM -->
   <g id="tatva-emblem">
-    <!-- 1. ORANGE FOUNDATION HOUSE (Solid terracotta orange at bottom left) -->
+    <!-- Orange foundation house -->
     <polygon 
-      points="173,225 173,184 202.5,166 232,184 232,225" 
+      points="170,246 170,196 201,175 232,196 232,246" 
       fill="#DE5826" 
     />
 
-    <!-- 2. OUTER NAVY GABLE ROOF & RIGHT WALL (Stroke-based for exact uniform width) -->
+    <!-- Outer Navy gable roof & right wall -->
     <path 
-      d="
-        M 181.25,152
-        L 181.25,119.5
-        L 250,76.5
-        L 318.75,119.5
-        L 318.75,216.75
-      " 
+      d="M 170,160 L 170,114 L 250,68 L 330,114 L 330,246" 
       fill="none" 
-      stroke="#0C2340" 
+      stroke="#0B2540" 
       stroke-width="16.5" 
       stroke-linejoin="miter" 
       stroke-miterlimit="4" 
       stroke-linecap="square" 
     />
 
-    <!-- 3. INTERLOCKING NAVY STRUCTURAL "S" RIBBON -->
+    <!-- Interlocking Navy structural S ribbon -->
     <path 
-      d="
-        M 205,134.5
-        L 250,106
-        L 289.5,131
-        L 289.5,166
-        L 248.5,191.5
-        L 248.5,216.75
-        L 318.75,216.75
-      " 
+      d="M 198,126 L 250,96 L 302,126 L 302,172 L 246,203 L 246,246 L 330,246" 
       fill="none" 
-      stroke="#0C2340" 
+      stroke="#0B2540" 
       stroke-width="16.5" 
       stroke-linejoin="miter" 
       stroke-miterlimit="4" 
@@ -48,11 +34,11 @@
   </g>
 
   <!-- TYPOGRAPHY -->
-  <g text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Arial, Montserrat, Helvetica, sans-serif">
-    <!-- TATVA in heavy bold navy uppercase -->
-    <text x="250" y="286" font-size="52" font-weight="900" fill="#0C2340" letter-spacing="4px">TATVA</text>
+  <g text-anchor="middle" font-family="Montserrat, -apple-system, sans-serif">
+    <!-- TATVA in heavy bold uppercase -->
+    <text x="250" y="296" font-size="52" font-weight="800" fill="#0B2540" letter-spacing="4px">TATVA</text>
     
-    <!-- STRUCTURA in tracking slate uppercase -->
-    <text x="252" y="322" font-size="19" font-weight="700" fill="#4B5868" letter-spacing="6.8px">STRUCTURA</text>
+    <!-- STRUCTURA in tracked uppercase -->
+    <text x="252" y="332" font-size="18.5" font-weight="700" fill="#0B2540" letter-spacing="6.8px">STRUCTURA</text>
   </g>
 </svg>

@@ -1,15 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
   <rect width="128" height="128" rx="20" fill="#FFFFFF" />
-  <g transform="translate(64, 64) scale(0.65)">
-    <g transform="translate(-250, -175)">
-      <!-- Orange House -->
-      <polygon points="173,225 173,184 202.5,166 232,184 232,225" fill="#DE5826" />
-      
-      <!-- Outer Navy Gable -->
-      <path d="M 181.25,152 L 181.25,119.5 L 250,76.5 L 318.75,119.5 L 318.75,216.75" fill="none" stroke="#0C2340" stroke-width="16.5" stroke-linejoin="miter" stroke-miterlimit="4" stroke-linecap="square" />
-      
-      <!-- Navy S Ribbon -->
-      <path d="M 205,134.5 L 250,106 L 289.5,131 L 289.5,166 L 248.5,191.5 L 248.5,216.75 L 318.75,216.75" fill="none" stroke="#0C2340" stroke-width="16.5" stroke-linejoin="miter" stroke-miterlimit="4" stroke-linecap="square" />
+  <g transform="translate(64, 64) scale(0.58)">
+    <g transform="translate(-250, -160)">
+      <!-- Orange foundation house -->
+      <polygon points="170,246 170,196 201,175 232,196 232,246" fill="#DE5826" />
+      <!-- Outer Navy gable roof & right wall -->
+      <path d="M 170,160 L 170,114 L 250,68 L 330,114 L 330,246" fill="none" stroke="#0B2540" stroke-width="16.5" stroke-linejoin="miter" stroke-miterlimit="4" stroke-linecap="square" />
+      <!-- Interlocking Navy structural S ribbon -->
+      <path d="M 198,126 L 250,96 L 302,126 L 302,172 L 246,203 L 246,246 L 330,246" fill="none" stroke="#0B2540" stroke-width="16.5" stroke-linejoin="miter" stroke-miterlimit="4" stroke-linecap="square" />
     </g>
   </g>
 </svg>

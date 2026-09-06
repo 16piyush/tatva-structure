@@ -133,7 +133,7 @@ export default function HeroCarousel({
           <div className="flex items-center gap-3 sm:gap-3.5">
             <div className="w-9 h-9 sm:w-11 sm:h-11 p-1 bg-white rounded-sm border border-white/20 shadow-md flex items-center justify-center shrink-0">
               <img 
-                src="/images/tatva_structura_logo.png?v=2" 
+                src="/images/unnamed.png" 
                 alt="Tatva Structura" 
                 className="w-full h-full object-contain"
               />

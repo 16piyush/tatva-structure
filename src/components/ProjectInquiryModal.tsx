@@ -75,7 +75,7 @@ export default function ProjectInquiryModal({ isOpen, onClose, initialSubject }:
         <div className="p-6 bg-slate-900/90 border-b border-slate-800 flex items-start gap-4">
           <div className="w-13 h-13 rounded-sm bg-white p-1 border border-white/20 shadow-md shrink-0 hidden sm:flex items-center justify-center">
             <img 
-              src="/images/tatva_structura_logo.png?v=2" 
+              src="/images/unnamed.png" 
               alt="Tatva Structura" 
               className="w-full h-full object-contain"
             />
