@@ -133,21 +133,21 @@ export default function HeroCarousel({
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 sm:gap-8 lg:gap-12 w-full">
             
             {/* Left: TATVA STRUCTURA & STRUCTURAL DESIGN CONSULTANCY */}
-            <div className="space-y-1 sm:space-y-2 text-left">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.92] tracking-tighter uppercase text-white font-heading">
-                TATVA <br className="hidden sm:inline" />
+            <div className="space-y-1.5 sm:space-y-2.5 text-left">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight tracking-tight uppercase text-white font-heading">
+                TATVA{' '}
                 <span className="text-transparent" style={{ WebkitTextStroke: '2px #F27D26' }}>
                   STRUCTURA
                 </span>
               </h1>
-              <p className="text-sm sm:text-lg md:text-xl lg:text-2xl font-bold uppercase tracking-[0.15em] text-[#F27D26] font-mono-tech">
+              <p className="text-xs sm:text-base md:text-lg lg:text-xl font-bold uppercase tracking-[0.16em] sm:tracking-[0.2em] text-[#F27D26] font-mono-tech">
                 STRUCTURAL DESIGN CONSULTANCY
               </p>
             </div>
 
-            {/* Right: YOU THINK WE MAKE (Enlarged to exactly match TATVA STRUCTURA size) */}
+            {/* Right: YOU THINK WE MAKE (Matching scale) */}
             <div className="text-right flex flex-col items-end justify-end shrink-0 self-end">
-              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.92] tracking-tighter uppercase text-white font-heading text-right">
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[0.95] tracking-tighter uppercase text-white font-heading text-right">
                 YOU THINK <br className="hidden sm:inline" />
                 <span className="text-transparent" style={{ WebkitTextStroke: '2px #F27D26' }}>
                   WE MAKE
