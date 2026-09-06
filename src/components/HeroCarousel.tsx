@@ -126,32 +126,35 @@ export default function HeroCarousel({
       <div className="absolute top-[-80px] right-[-80px] w-[500px] h-[500px] rounded-full bg-[#F27D26] opacity-[0.06] blur-[140px] pointer-events-none z-10" />
 
       {/* Main Hero Container */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 w-full">
-        <div className="max-w-4xl space-y-6 sm:space-y-8 text-left">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-24 w-full">
+        <div className="space-y-8 text-left">
           
-          {/* Top Brand Tagline Lead */}
-          <div className="flex items-center gap-3 sm:gap-3.5">
-            <div className="w-9 h-9 sm:w-11 sm:h-11 p-1 bg-white rounded-sm border border-white/20 shadow-md flex items-center justify-center shrink-0">
-              <img 
-                src="/images/unnamed.png" 
-                alt="Tatva Structura" 
-                className="w-full h-full object-contain"
-              />
+          {/* Dual Brand & Motto Container: TATVA STRUCTURA (Left) & YOU THINK WE MAKE (Right) */}
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 sm:gap-8 lg:gap-12 w-full">
+            
+            {/* Left: TATVA STRUCTURA & STRUCTURAL DESIGN CONSULTANCY */}
+            <div className="space-y-1 sm:space-y-2 text-left">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.92] tracking-tighter uppercase text-white font-heading">
+                TATVA <br className="hidden sm:inline" />
+                <span className="text-transparent" style={{ WebkitTextStroke: '2px #F27D26' }}>
+                  STRUCTURA
+                </span>
+              </h1>
+              <p className="text-sm sm:text-lg md:text-xl lg:text-2xl font-bold uppercase tracking-[0.15em] text-[#F27D26] font-mono-tech">
+                STRUCTURAL DESIGN CONSULTANCY
+              </p>
             </div>
-            <div className="w-6 sm:w-10 h-0.5 bg-[#F27D26]"></div>
-            <span className="text-[#F27D26] uppercase tracking-[0.25em] font-bold text-xs sm:text-sm font-mono-tech">
-              TATVA STRUCTURA &bull; STRUCTURAL DESIGN CONSULTANCY
-            </span>
-          </div>
 
-          {/* Signature Brand Headline: YOU THINK WE MAKE */}
-          <div>
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.95] sm:leading-[0.9] tracking-tighter uppercase text-white font-heading">
-              YOU THINK <br className="hidden sm:inline" />
-              <span className="text-transparent" style={{ WebkitTextStroke: '2px #F27D26' }}>
-                WE MAKE
-              </span>
-            </h1>
+            {/* Right: YOU THINK WE MAKE (Enlarged to exactly match TATVA STRUCTURA size) */}
+            <div className="text-right flex flex-col items-end justify-end shrink-0 self-end">
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.92] tracking-tighter uppercase text-white font-heading text-right">
+                YOU THINK <br className="hidden sm:inline" />
+                <span className="text-transparent" style={{ WebkitTextStroke: '2px #F27D26' }}>
+                  WE MAKE
+                </span>
+              </div>
+            </div>
+
           </div>
 
           {/* Action Buttons: EXPLORE DETAILS, INQUIRE NOW, BLUEPRINTS, WHATSAPP */}

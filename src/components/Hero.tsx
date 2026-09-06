@@ -87,15 +87,21 @@ export default function Hero({ onExploreExpertise, onViewProjects, onOpenInquiry
             {/* Massive Bold Headline with Stroke Effect */}
             <div className="space-y-2 sm:space-y-3">
               <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[88px] font-black leading-[0.95] sm:leading-[0.88] tracking-tighter uppercase text-white font-heading">
-                YOU THINK<br/>
+                TATVA<br/>
                 <span className="text-transparent" style={{ WebkitTextStroke: '1.5px #F27D26' }}>
-                  WE MAKE
+                  STRUCTURA
                 </span>
               </h1>
               
-              <h2 className="text-base sm:text-xl md:text-2xl font-bold uppercase tracking-wide text-slate-300 font-heading">
-                {COMPANY_INFO.subtitle}
-              </h2>
+              <div className="flex items-center gap-2 pt-1">
+                <span className="text-sm sm:text-lg md:text-xl font-bold uppercase tracking-widest text-[#F27D26] font-mono-tech">
+                  YOU THINK WE MAKE
+                </span>
+                <span className="text-xs text-slate-500">&bull;</span>
+                <span className="text-xs sm:text-sm uppercase tracking-wider text-slate-300 font-mono-tech">
+                  {COMPANY_INFO.subtitle}
+                </span>
+              </div>
             </div>
 
             {/* Supporting Text */}
