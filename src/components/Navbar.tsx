@@ -116,7 +116,7 @@ export default function Navbar({ onOpenInquiry, onOpenBlueprint }: NavbarProps) 
           >
             <div className="h-12 sm:h-14 w-12 sm:w-14 bg-white p-1 rounded-sm shadow-md border border-white/20 flex items-center justify-center shrink-0 group-hover:border-[#DF5928] transition-all">
               <img 
-                src="/images/unnamed.png" 
+                src="/images/logo.jpeg" 
                 alt="Tatva Structura Logo" 
                 className="w-full h-full object-contain"
               />
