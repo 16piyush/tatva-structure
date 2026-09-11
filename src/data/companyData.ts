@@ -232,7 +232,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     scope: 'Review of shed design and construction drawings.',
     specs: '100,000 sqft Heavy Industrial Shed',
     highlights: ['Structural Steel Review', 'Long-span framing verification', 'Construction drawing audit'],
-    imageUrl: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/industrial_shed_100000sqft.jpg',
     tag: 'Industrial Facility',
     featured: true
   },
@@ -293,7 +293,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     scope: 'Structural design and preparation of drawings for chimney interform structure.',
     specs: '200-meter Tall Chimney Interform System',
     highlights: ['Extreme height dynamic wind response', 'Slipform/interform structural sizing', 'High-grade concrete & steel reinforcement'],
-    imageUrl: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/industrial_chimney_200m.jpg',
     tag: 'Public Infrastructure',
     featured: true
   },
@@ -390,8 +390,9 @@ export const PROJECTS_DATA: ProjectItem[] = [
     scope: 'Complete civil design and drawings for all units.',
     specs: '3.5 MLD Complete Treatment Facility',
     highlights: ['Civil structural calculations', 'Underground & above-ground holding units', 'Detailed rebar drawings'],
-    imageUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80',
-    tag: 'Water & Wastewater'
+    imageUrl: '/images/treatment_plant_3_5mld.jpg',
+    tag: 'Water & Wastewater',
+    featured: true
   },
 
   // 4. Commercial & Hospitality
@@ -409,7 +410,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     ],
     specs: '40,000 sqft Column-Free Hospitality Space',
     highlights: ['Large column-free ballroom spans', 'Hybrid RCC and structural steel framing', 'Complete fabrication and civil detailing'],
-    imageUrl: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/banquet_hall_40000sqft.jpg',
     tag: 'Commercial Hospitality',
     featured: true
   },
@@ -424,9 +425,10 @@ export const PROJECTS_DATA: ProjectItem[] = [
       'Fabrication drawings'
     ],
     specs: '55,000 sqft Event & Banquet Complex',
-    highlights: ['Structural engineering review', 'High-span roof truss fabrication drawings', 'Connection design verification'],
-    imageUrl: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80',
-    tag: 'Commercial Hospitality'
+    highlights: ['Structural engineering review', 'High-span steel portal frame fabrication drawings', 'Connection design verification & thermal roof detailing'],
+    imageUrl: '/images/banquet_hall_55000sqft.jpg',
+    tag: 'Commercial Hospitality',
+    featured: true
   },
   {
     id: 'residential-mangalore',
@@ -449,10 +451,10 @@ export const PROJECTS_DATA: ProjectItem[] = [
     title: 'Igloo Blast / Storage Structure',
     category: 'special-structures',
     client: 'MES / Archlife Associates',
-    scope: 'Structural design of igloo structure, approved by IIT Roorkee.',
-    specs: 'Specialized Arch Vaulted Igloo Structure',
+    scope: 'Structural engineering and arch vault analysis of specialized igloo storage & blast protective structure, vetted and approved by IIT Roorkee.',
+    specs: 'Specialized Arch Vaulted Igloo Blast / Storage Structure',
     highlights: ['Approved by IIT Roorkee', 'Arch structural analysis & thrust balancing', 'Defense/MES standard compliance'],
-    imageUrl: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/images/igloo_blast_storage_structure.jpg',
     tag: 'Special Structure',
     approvalAuthority: 'Approved by IIT Roorkee',
     featured: true
@@ -596,11 +598,12 @@ export const PROJECTS_DATA: ProjectItem[] = [
     title: 'Abu Dhabi Steel Processing Facilities',
     category: 'international',
     location: 'Abu Dhabi, United Arab Emirates',
-    scope: 'Steel plant structural and heavy equipment foundation design experience according to Abu Dhabi & international codes.',
+    scope: 'Steel plant structural, overhead crane bay runway girders, and heavy equipment foundation design experience according to Abu Dhabi & international codes.',
     specs: 'Heavy Steel Mill & Foundation Infrastructure',
-    highlights: ['Abu Dhabi regional code compliance', 'Heavy rolling mill vibration isolation', 'Severe coastal desert corrosion design'],
-    imageUrl: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
-    tag: 'Middle East Steel Facility'
+    highlights: ['Abu Dhabi regional code compliance (ADIBC)', 'EOT crane runway girder & rolling mill bays', 'Severe coastal desert corrosion design'],
+    imageUrl: '/images/abu_dhabi_processing_facility.jpg',
+    tag: 'Middle East Steel Facility',
+    featured: true
   }
 ];
 

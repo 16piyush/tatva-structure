@@ -25,13 +25,13 @@ interface SlideItem {
 const CAROUSEL_SLIDES: SlideItem[] = [
   {
     id: 'industrial-peb',
-    bgImage: '/images/project_peb_warehouse_3d.jpg',
-    title: 'Heavy Industrial & PEB Structures'
+    bgImage: '/images/industrial_shed_100000sqft.jpg',
+    title: 'Heavy Industrial & PEB Structures (100,000 SQFT)'
   },
   {
     id: 'peb-site-execution',
-    bgImage: '/images/project_peb_site_erection.jpg',
-    title: 'PEB Portal Framing & Site Execution'
+    bgImage: '/images/banquet_hall_40000sqft.jpg',
+    title: '40,000 SQFT Column-Free PEB Banquet Hall Portal Frame'
   },
   {
     id: 'concrete-highrise',
@@ -40,13 +40,13 @@ const CAROUSEL_SLIDES: SlideItem[] = [
   },
   {
     id: 'water-stp',
-    bgImage: '/images/project_water_treatment_stp.jpg',
-    title: '215 MLD Water & Sewage Treatment Plants'
+    bgImage: '/images/treatment_plant_3_5mld.jpg',
+    title: '3.5 MLD Sewage Treatment Plant (STP)'
   },
   {
-    id: 'power-substations',
-    bgImage: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=2000&q=85',
-    title: 'Power Stations & Substations'
+    id: 'power-chimney',
+    bgImage: '/images/industrial_chimney_200m.jpg',
+    title: '200m High Industrial Chimneys & Power Infrastructure'
   }
 ];
 

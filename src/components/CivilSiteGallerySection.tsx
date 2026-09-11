@@ -27,6 +27,28 @@ interface CivilPhoto {
 
 const CIVIL_GALLERY_PHOTOS: CivilPhoto[] = [
   {
+    id: 'photo-banquet-hall-55k',
+    title: '55,000 Sq.Ft. Banquet Hall & Event Complex Portal Frame',
+    category: 'steel',
+    categoryLabel: 'COMMERCIAL & HOSPITALITY PEB',
+    location: 'Gurugram, Haryana / Archlife Associates',
+    specs: '55,000 Sq.Ft. Event Complex | Structural Steel Portal Frame',
+    description: 'On-site execution of 55,000 sqft event & banquet complex structural steel portal frames, wide-flange I-columns, insulated metal deck roof with daylight skylights, and foundation pedestals.',
+    imageUrl: '/images/banquet_hall_55000sqft.jpg',
+    codeStandard: 'IS 800:2007 (PEB) / AISC 360'
+  },
+  {
+    id: 'photo-banquet-hall-steel',
+    title: '40,000 Sq.Ft. Banquet Hall PEB Portal Frame Erection',
+    category: 'steel',
+    categoryLabel: 'COMMERCIAL & HOSPITALITY PEB',
+    location: 'Bareilly, Uttar Pradesh / Anas Enterprises',
+    specs: '40,000 Sq.Ft. Clear Span | Structural Steel Framing',
+    description: 'On-site execution of 40,000 sqft column-free banquet hall structural steel portal frame, tapered I-columns, roof purlins, anchor bolt survey, and foundation pedestals.',
+    imageUrl: '/images/banquet_hall_40000sqft.jpg',
+    codeStandard: 'IS 800:2007 (PEB) / AISC 360'
+  },
+  {
     id: 'photo-steel-shed-portal',
     title: 'PEB Industrial Shed Portal Frame Erection',
     category: 'steel',
@@ -67,7 +89,7 @@ const CIVIL_GALLERY_PHOTOS: CivilPhoto[] = [
     location: 'Turnkey Manufacturing Plant',
     specs: '100,000+ Sq.Ft. Facility | Cantilever Loading Canopy',
     description: 'Master 3D BIM coordination of modern pre-engineered warehouse facility with cantilever front canopy, heavy transport road circulation, and integrated storm drainage.',
-    imageUrl: '/images/project_peb_warehouse_3d.jpg',
+    imageUrl: '/images/industrial_shed_100000sqft.jpg',
     codeStandard: 'BIM LOD 350 / PEB Standards'
   },
   {
@@ -105,13 +127,13 @@ const CIVIL_GALLERY_PHOTOS: CivilPhoto[] = [
   },
   {
     id: 'photo-water-stp',
-    title: '215 MLD Okhla STP & Liquid Retention Tanks',
+    title: '3.5 MLD Sewage Treatment Plant (STP) & Circular Clarifiers',
     category: 'water',
     categoryLabel: 'HYDRAULIC & STP ASSETS',
-    location: 'New Delhi (Yamuna Clean Mission)',
-    specs: '215 MLD Capacity | Circular Clarifiers & Digesters',
-    description: 'Fluid-retaining reinforced concrete tanks designed with stringent crack-width limitation (< 0.1 mm) and uplift hydrostatic relief under IS 3370.',
-    imageUrl: '/images/project_water_treatment_stp.jpg',
+    location: 'S S Engineering Works / Municipal STP Assets',
+    specs: '3.5 MLD Treatment Facility | Circular Clarifiers & Aeration Units',
+    description: 'Structural engineering and civil execution drawings for fluid-retaining reinforced concrete circular clarifier tanks with rotating scraper bridges, aeration digesters, and uplift relief under IS 3370.',
+    imageUrl: '/images/treatment_plant_3_5mld.jpg',
     codeStandard: 'IS 3370 (Parts 1-4) Water Retaining'
   },
   {
@@ -138,25 +160,36 @@ const CIVIL_GALLERY_PHOTOS: CivilPhoto[] = [
   },
   {
     id: 'photo-substation-power',
-    title: '400kV Gas-Insulated Substations (GIS) & Chimneys',
+    title: '200m High Industrial Chimney & Power Infrastructure',
     category: 'concrete',
     categoryLabel: 'POWER & UTILITIES',
-    location: 'Thermal Stations / Data Centers',
-    specs: '85m Tall Chimneys | AECOM-Vetted GIS Towers',
-    description: 'Resonance avoidance design for heavy turbine vibrating bases under IS 2974, blast-resistant electrical switchgear enclosures, and tall aerodynamic chimney slipforms.',
-    imageUrl: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=80',
-    codeStandard: 'IS 2974 Machine Bases / IS 4998'
+    location: 'NBCC Industrial Project / Thermal Plant',
+    specs: '200m Tall Concrete Chimney | Dynamic Wind Response',
+    description: 'Structural engineering and drawing preparation for a 200m tall industrial chimney interform structure, dynamic wind and seismic response under IS 4998, and heavy plant equipment integration.',
+    imageUrl: '/images/industrial_chimney_200m.jpg',
+    codeStandard: 'IS 4998 / IS 1893 / IS 456'
   },
   {
-    id: 'photo-global-highrise',
-    title: 'Cross-Border International Structural Engineering',
+    id: 'photo-abu-dhabi-processing',
+    title: 'Abu Dhabi Heavy Steel Processing Facilities & Crane Bays',
     category: 'steel',
-    categoryLabel: 'INTERNATIONAL PROJECTS',
-    location: 'Ethiopia / UAE / United Kingdom',
-    specs: 'Edible Oil Refineries | Commercial High-Rise Towers',
-    description: 'Global turnkey structural drawings delivered in strict compliance with British Standards, Eurocodes (EN 1991-1993), American ACI 318, AISC 360, and ADIBC.',
-    imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
-    codeStandard: 'Eurocodes / ACI 318 / ADIBC UAE'
+    categoryLabel: 'INTERNATIONAL & CRANE BAYS',
+    location: 'Abu Dhabi, United Arab Emirates (UAE)',
+    specs: 'Heavy Crane Runway Girders | Rolling Mill Bays & Fabrication Shop',
+    description: 'Heavy industrial steel processing facility featuring overhead travelling (EOT) crane runway girders, high-tonnage built-up column portal bays, and vibrating equipment foundation design under ADIBC & British Standards.',
+    imageUrl: '/images/abu_dhabi_processing_facility.jpg',
+    codeStandard: 'ADIBC / BS 5950 / AISC 360'
+  },
+  {
+    id: 'photo-igloo-blast',
+    title: 'Igloo Blast Protection & Specialized Arch Storage Vault',
+    category: 'concrete',
+    categoryLabel: 'DEFENSE & SPECIAL STRUCTURES',
+    location: 'MES / Military Engineer Services (Approved by IIT Roorkee)',
+    specs: 'Curved Vault Shell | Impulsive Blast Overpressure Resistance',
+    description: 'High-performance arch vaulted igloo protective storage structure engineered to withstand impulsive blast loading, soil overburden arching mechanics, and specialized defense storage criteria, rigorously vetted by IIT Roorkee.',
+    imageUrl: '/images/igloo_blast_storage_structure.jpg',
+    codeStandard: 'MES Criteria / IS 4991 Blast Resistant Design'
   }
 ];
 

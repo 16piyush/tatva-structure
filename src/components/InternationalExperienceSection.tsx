@@ -22,7 +22,8 @@ export default function InternationalExperienceSection({ onOpenInquiry }: Intern
       project: '250 TPD Edible Oil Plant',
       scope: 'Complete structural design of processing towers, raw seed storage silos, refinery units, and heavy industrial foundation systems.',
       codeStandard: 'European Codes (Eurocodes EN 1991, EN 1992, EN 1993)',
-      iconBg: 'from-amber-900/30 to-amber-950/50'
+      iconBg: 'from-amber-900/30 to-amber-950/50',
+      imageUrl: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80'
     },
     {
       country: 'Abu Dhabi (UAE)',
@@ -31,7 +32,8 @@ export default function InternationalExperienceSection({ onOpenInquiry }: Intern
       project: 'Heavy Steel Processing Facilities',
       scope: 'Structural design and heavy vibrating machine foundation engineering for steel processing mills adhering to severe ambient thermal criteria.',
       codeStandard: 'Abu Dhabi International Building Codes (ADIBC) & British Standards',
-      iconBg: 'from-emerald-900/30 to-emerald-950/50'
+      iconBg: 'from-emerald-900/30 to-emerald-950/50',
+      imageUrl: '/images/abu_dhabi_processing_facility.jpg'
     },
     {
       country: 'United Kingdom',
@@ -40,7 +42,8 @@ export default function InternationalExperienceSection({ onOpenInquiry }: Intern
       project: 'Bridges & Highways Assessments',
       scope: '140m three-span composite bridge (NHS Lanarkshire) and curved bridge superstructure assessment with 28.8m radius (M8 St Georges Road).',
       codeStandard: 'UK Highways Standards CS 454, CS 455 & Eurocode 3 / 4',
-      iconBg: 'from-sky-900/30 to-sky-950/50'
+      iconBg: 'from-sky-900/30 to-sky-950/50',
+      imageUrl: '/images/project_patna_six_lane_flyover.jpg'
     }
   ];
 
@@ -91,8 +94,25 @@ export default function InternationalExperienceSection({ onOpenInquiry }: Intern
                   </span>
                 </div>
 
+                {/* Project Image Preview */}
+                {item.imageUrl && (
+                  <div className="mb-4 rounded-xl overflow-hidden border border-slate-800/80 aspect-video relative group/img">
+                    <img 
+                      src={item.imageUrl} 
+                      alt={item.project} 
+                      className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500" 
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                    <div className="absolute bottom-2 left-3 right-3 flex items-center justify-between text-[11px] font-mono-tech text-white/90">
+                      <span className="truncate">{item.country}</span>
+                      <span className="text-[#E06D14] font-semibold">{item.region}</span>
+                    </div>
+                  </div>
+                )}
+
                 {/* Project Title */}
-                <div className="text-sm font-bold text-amber-400 font-heading mb-3">
+                <div className="text-sm font-bold text-amber-400 font-heading mb-2">
                   {item.project}
                 </div>
 
