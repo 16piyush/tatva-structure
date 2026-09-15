@@ -27,6 +27,17 @@ interface CivilPhoto {
 
 const CIVIL_GALLERY_PHOTOS: CivilPhoto[] = [
   {
+    id: 'photo-commercial-atrium-hospitality',
+    title: 'Commercial Corporate & Hospitality Atrium Complex',
+    category: 'steel',
+    categoryLabel: 'COMMERCIAL & HOSPITALITY',
+    location: 'NCR Urban Tech Corridor / Commercial Development',
+    specs: 'Inclined Tubular V-Columns | Curved Mezzanine & Timber-Steel Roof',
+    description: 'Double-height commercial hospitality atrium featuring architecturally exposed structural steel (AESS) inclined tubular V-columns, sweeping curved timber-steel mezzanine, high-span clerestory roof trusses, and integrated amphitheatre stairs.',
+    imageUrl: '/images/commercial_hospitality_atrium.jpg',
+    codeStandard: 'IS 800:2007 (AESS) / AISC 360 / NBC 2016'
+  },
+  {
     id: 'photo-banquet-hall-55k',
     title: '55,000 Sq.Ft. Banquet Hall & Event Complex Portal Frame',
     category: 'steel',
@@ -47,6 +58,28 @@ const CIVIL_GALLERY_PHOTOS: CivilPhoto[] = [
     description: 'On-site execution of 40,000 sqft column-free banquet hall structural steel portal frame, tapered I-columns, roof purlins, anchor bolt survey, and foundation pedestals.',
     imageUrl: '/images/banquet_hall_40000sqft.jpg',
     codeStandard: 'IS 800:2007 (PEB) / AISC 360'
+  },
+  {
+    id: 'photo-industrial-facility-eot',
+    title: 'Modern Industrial Processing Facility & Heavy EOT Crane Bay',
+    category: 'steel',
+    categoryLabel: 'INDUSTRIAL FACILITIES & CRANES',
+    location: 'Advanced Manufacturing Hub / Industrial Processing Zone',
+    specs: 'High-Span PEB Bay | Heavy Yellow EOT Crane & Epoxy Floor',
+    description: 'Active industrial manufacturing and processing plant featuring wide-span structural steel portal frames, overhead yellow electric travelling (EOT) crane runway system, translucent roof skylights, high-grade epoxy floor, and heavy machine vibration isolation pads.',
+    imageUrl: '/images/industrial_facility_plant.jpg',
+    codeStandard: 'IS 800:2007 / IS 875 / AISC 360'
+  },
+  {
+    id: 'photo-oil-gas-refinery',
+    title: 'Oil & Gas Petrochemical Refinery & Multi-Tier Pipe Rack Complex',
+    category: 'steel',
+    categoryLabel: 'OIL & GAS & PETROCHEMICAL',
+    location: 'Petrochemical Corridor & Refinery Processing Zone',
+    specs: 'Multi-Tier Pipe Racks | Distillation Column Superstructures',
+    description: 'Structural engineering design of multi-tier structural steel pipe racks, distillation and fractionation column support towers, process skid foundations, elevated catwalk platforms, and fireproofed frames under PIP & API standards.',
+    imageUrl: '/images/oil_and_gas_refinery.jpg',
+    codeStandard: 'API 650 / PIP STC01015 / AISC 360'
   },
   {
     id: 'photo-steel-shed-portal',
@@ -159,6 +192,17 @@ const CIVIL_GALLERY_PHOTOS: CivilPhoto[] = [
     codeStandard: 'IS 2911 / IS 14458 / Eurocode 7'
   },
   {
+    id: 'photo-transmission-towers',
+    title: 'High-Voltage Electrical Transmission Lines & Steel Lattice Towers',
+    category: 'steel',
+    categoryLabel: 'POWER & UTILITIES',
+    location: 'National & Regional High-Voltage Transmission Grid',
+    specs: '400kV / 220kV EHV Lattice Towers | High-Tension Cable Corridors',
+    description: 'Structural engineering design of tall lattice steel electricity transmission towers, catenary cable sag-tension dynamics, longitudinal broken-wire torsional stability, and reinforced concrete deep stub pile foundations.',
+    imageUrl: '/images/power_transmission_tower.jpg',
+    codeStandard: 'IS 802 / CBIP Manual 268 / ASCE 10'
+  },
+  {
     id: 'photo-substation-power',
     title: '200m High Industrial Chimney & Power Infrastructure',
     category: 'concrete',
@@ -179,6 +223,17 @@ const CIVIL_GALLERY_PHOTOS: CivilPhoto[] = [
     description: 'Heavy industrial steel processing facility featuring overhead travelling (EOT) crane runway girders, high-tonnage built-up column portal bays, and vibrating equipment foundation design under ADIBC & British Standards.',
     imageUrl: '/images/abu_dhabi_processing_facility.jpg',
     codeStandard: 'ADIBC / BS 5950 / AISC 360'
+  },
+  {
+    id: 'photo-special-tiered-frame',
+    title: 'Special Structure 3D FEM Spatial Analysis Model',
+    category: 'steel',
+    categoryLabel: 'SPECIAL STRUCTURES & RETROFIT',
+    location: 'Structural Engineering CAE & 3D Analytical Modeling Lab',
+    specs: 'Tiered Curved Multi-Level Portal Frame | 3D Spatial Wireframe Grid',
+    description: '3D finite element spatial frame analytical model of a complex tiered curved multi-level steel portal frame, complete with coordinate grid intersections, nodal displacement checks, curved rafter design, and retrofitting load path validations.',
+    imageUrl: '/images/special_structure_retrofit.jpg',
+    codeStandard: 'IS 800:2007 / AISC 360 / STAAD.Pro 3D FEM'
   },
   {
     id: 'photo-igloo-blast',

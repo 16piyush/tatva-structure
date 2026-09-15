@@ -346,6 +346,19 @@ export const PROJECTS_DATA: ProjectItem[] = [
 
   // 3. Power & Utilities
   {
+    id: 'high-voltage-transmission-corridor',
+    title: 'High-Voltage Electrical Transmission Lines & Substation Corridor',
+    category: 'power-utilities',
+    client: 'Power Transmission & Distribution Utilities',
+    location: 'Interstate Power Transmission Corridor',
+    scope: 'Structural design and 3D analysis of high-voltage lattice steel transmission towers, sag-tension line dynamics, dynamic wind drag sizing, and deep stub pile foundations.',
+    specs: '400kV / 220kV Extra High Voltage (EHV) Lattice Steel Transmission Towers',
+    highlights: ['Lattice steel tower dynamic wind & broken wire condition analysis', 'Deep stub foundation & heavy pile caps design', 'IS 802 / CBIP transmission line compliance'],
+    imageUrl: '/images/power_transmission_tower.jpg',
+    tag: 'Transmission & Substation',
+    featured: true
+  },
+  {
     id: 'stt-data-centre-substation',
     title: 'STT Data Centre Substation — Noida',
     category: 'power-utilities',
@@ -431,6 +444,24 @@ export const PROJECTS_DATA: ProjectItem[] = [
     featured: true
   },
   {
+    id: 'commercial-atrium-complex',
+    title: 'Commercial Corporate & Hospitality Atrium Complex',
+    category: 'commercial-hospitality',
+    client: 'Corporate & Hospitality Infrastructure',
+    location: 'NCR Urban Tech Corridor',
+    scope: [
+      'Structural design & 3D analysis',
+      'Inclined V-column & branch steel analysis',
+      'Curved timber-steel composite mezzanine',
+      'Amphitheatre stair structural framing'
+    ],
+    specs: 'Double-Height Atrium with Inclined V-Columns & Curved Mezzanine',
+    highlights: ['Inclined structural steel tubular V-struts and branch tree columns', 'Curved sweeping mezzanine with exposed timber soffits', 'Stepped amphitheatre seating and polished architectural floor'],
+    imageUrl: '/images/commercial_hospitality_atrium.jpg',
+    tag: 'Commercial Hospitality',
+    featured: true
+  },
+  {
     id: 'residential-mangalore',
     title: 'Residential Building — B+G+1',
     category: 'commercial-hospitality',
@@ -446,6 +477,18 @@ export const PROJECTS_DATA: ProjectItem[] = [
   },
 
   // 5. Special Structures & Rehabilitation
+  {
+    id: 'special-tiered-curved-frame',
+    title: 'Tiered Curved Multi-Level Portal Frame Structure',
+    category: 'special-structures',
+    client: 'Special Structural Architecture & Engineering',
+    scope: '3D finite element structural analysis, geometric coordinate modeling, tiered curved rafter sizing, wind load distribution, and retrofitting validation.',
+    specs: 'Multi-Level Curved Roof Geometry with 3D Spatial Wireframe FEM Analysis',
+    highlights: ['Multi-tier asymmetric curved portal frame', 'Full 3D STAAD/Tekla analytical grid model', 'Dynamic wind load & retrofitting member verification'],
+    imageUrl: '/images/special_structure_retrofit.jpg',
+    tag: 'Special Structure / FEA',
+    featured: true
+  },
   {
     id: 'igloo-structure-mes',
     title: 'Igloo Blast / Storage Structure',
@@ -889,7 +932,7 @@ export const INDUSTRIES_SERVED: IndustryItem[] = [
     id: 'industrial',
     title: 'Industrial Facilities',
     description: 'Heavy manufacturing plants, assembly sheds, warehouses, and crane-operated fabrication halls.',
-    imageUrl: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
+    imageUrl: '/images/industrial_facility_plant.jpg',
     focusAreas: ['Heavy Crane Gantry Systems', 'Pre-Engineered Buildings (PEB)', 'Vibration-Free Heavy Floors']
   },
   {
@@ -902,9 +945,9 @@ export const INDUSTRIES_SERVED: IndustryItem[] = [
   {
     id: 'power-utilities',
     title: 'Power & Utilities',
-    description: 'Thermal power plants, high-voltage electrical substations, switchyards, and transformer foundations.',
-    imageUrl: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80',
-    focusAreas: ['Turbine Generator Pedestals', '66/22KV Substation Gantries', 'Transformer Blast Walls']
+    description: 'Thermal power plants, high-voltage electrical transmission towers, switchyards, and transformer foundations.',
+    imageUrl: '/images/power_transmission_tower.jpg',
+    focusAreas: ['High-Voltage Lattice Transmission Towers', 'Switchyard Gantries & Substation Bays', 'Turbine Generator Pedestals']
   },
   {
     id: 'steel-plants',
@@ -917,7 +960,7 @@ export const INDUSTRIES_SERVED: IndustryItem[] = [
     id: 'oil-gas',
     title: 'Oil & Gas',
     description: 'Refinery structures, pipe racks, storage tank foundations, and process skid support frames.',
-    imageUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80',
+    imageUrl: '/images/oil_and_gas_refinery.jpg',
     focusAreas: ['Modular Process Skids', 'Multi-Tier Pipe Racks', 'Containment Dykes']
   },
   {
@@ -945,8 +988,8 @@ export const INDUSTRIES_SERVED: IndustryItem[] = [
     id: 'commercial',
     title: 'Commercial & Hospitality',
     description: 'Large banquet halls, high-span shopping complexes, corporate office towers, and institutional campuses.',
-    imageUrl: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80',
-    focusAreas: ['Column-Free Ballroom Spans', 'Composite Steel Deck Floors', 'Modern Facade Bracing']
+    imageUrl: '/images/commercial_hospitality_atrium.jpg',
+    focusAreas: ['Inclined V-Column Tree Frames', 'Curved Mezzanines & Composite Decks', 'Column-Free Ballroom Spans']
   },
   {
     id: 'residential',
@@ -966,8 +1009,8 @@ export const INDUSTRIES_SERVED: IndustryItem[] = [
     id: 'special-structures',
     title: 'Special Structures & Retrofit',
     description: 'Blast-resistant MES defense bunkers, igloo storage arches, 200m chimneys, and GFRP retrofitting.',
-    imageUrl: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80',
-    focusAreas: ['Impulsive Dynamic Blast Sizing', 'GFRP Composite Restrengthening', 'NDT Structural Audits']
+    imageUrl: '/images/special_structure_retrofit.jpg',
+    focusAreas: ['3D Spatial FEM Modeling', 'GFRP Composite Restrengthening', 'NDT Structural Audits']
   }
 ];
 
