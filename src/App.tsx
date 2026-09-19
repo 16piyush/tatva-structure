@@ -21,6 +21,7 @@ import Footer from './components/Footer';
 import ProjectDetailModal from './components/ProjectDetailModal';
 import ProjectInquiryModal from './components/ProjectInquiryModal';
 import BlueprintViewerModal from './components/BlueprintViewerModal';
+import FloatingWhatsAppButton from './components/FloatingWhatsAppButton';
 
 import { ProjectItem } from './types';
 
@@ -151,6 +152,9 @@ export default function App() {
         isOpen={blueprintModalOpen}
         onClose={() => setBlueprintModalOpen(false)}
       />
+
+      {/* Floating WhatsApp Quick Action Button */}
+      <FloatingWhatsAppButton />
     </div>
   );
 }

@@ -4,8 +4,7 @@ import {
   ChevronLeft, 
   ChevronRight, 
   ExternalLink,
-  FileCode2,
-  PhoneCall
+  FileCode2
 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/companyData';
 
@@ -190,18 +189,6 @@ export default function HeroCarousel({
                 <span>BLUEPRINT</span>
               </button>
             )}
-
-            {/* WhatsApp */}
-            <a
-              href={`https://wa.me/${COMPANY_INFO.phoneRaw}?text=Hello%20Tatva%20Structura,%20I%20am%20interested%20in%20structural%20design%20consultation.`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-5 sm:px-7 py-3.5 sm:py-4 rounded-sm font-bold text-xs sm:text-sm uppercase tracking-wider text-emerald-400 hover:text-white hover:bg-emerald-600 bg-emerald-950/40 border border-emerald-500/50 shadow-lg shadow-emerald-950/30 transition-all duration-200 cursor-pointer"
-              id="carousel-btn-whatsapp"
-            >
-              <PhoneCall className="w-4 h-4 mr-2" />
-              <span>WHATSAPP</span>
-            </a>
           </div>
 
         </div>

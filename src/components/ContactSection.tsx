@@ -44,22 +44,44 @@ export default function ContactSection({ initialSubject }: ContactSectionProps) 
     'Other Engineering Consultation'
   ];
 
+  const buildWhatsAppMessage = () => {
+    return [
+      `*TATVA STRUCTURA — WEBSITE PROJECT INQUIRY*`,
+      ``,
+      `*Client Name:* ${formData.name.trim() || 'N/A'}`,
+      `*Phone Number:* ${formData.phone.trim() || 'N/A'}`,
+      `*Email Address:* ${formData.email.trim() || 'N/A'}`,
+      `*Company / Organization:* ${formData.company.trim() ? formData.company.trim() : 'N/A'}`,
+      `*Project Type / Scope:* ${formData.projectType || 'Industrial Infrastructure'}`,
+      ``,
+      `*Project Details & Message:*`,
+      `${formData.message.trim() || 'Consultation request'}`,
+      ``,
+      `----------------------------------------`,
+      `_Sent via Tatva Structura Website_`
+    ].join('\n');
+  };
+
+  const openWhatsAppChat = () => {
+    const text = encodeURIComponent(buildWhatsAppMessage());
+    window.open(`https://wa.me/${COMPANY_INFO.phoneRaw}?text=${text}`, '_blank');
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
-    // Simulate submission
+    // Open WhatsApp directly with all details
+    openWhatsAppChat();
+
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
-    }, 800);
+    }, 500);
   };
 
   const handleWhatsAppDirect = () => {
-    const text = encodeURIComponent(
-      `Hello Tatva Structura, my name is ${formData.name || 'Client'}. I am inquiring about ${formData.projectType}. ${formData.company ? `Company: ${formData.company}.` : ''} Message: ${formData.message}`
-    );
-    window.open(`https://wa.me/${COMPANY_INFO.phoneRaw}?text=${text}`, '_blank');
+    openWhatsAppChat();
   };
 
   return (
@@ -309,15 +331,16 @@ export default function ContactSection({ initialSubject }: ContactSectionProps) 
                     <button
                       type="submit"
                       disabled={loading}
-                      className="w-full py-3.5 rounded-xl font-bold text-sm bg-gradient-to-r from-[#E06D14] to-[#C25E00] hover:from-[#EA7A24] hover:to-[#D46706] text-white shadow-lg shadow-[#E06D14]/25 transition-all flex items-center justify-center space-x-2 cursor-pointer disabled:opacity-50"
+                      className="w-full py-3.5 rounded-xl font-bold text-sm bg-[#25D366] hover:bg-[#20ba59] active:scale-[0.99] text-slate-950 shadow-lg shadow-[#25D366]/20 transition-all flex items-center justify-center space-x-2 cursor-pointer disabled:opacity-50"
                       id="submit-inquiry-button"
                     >
                       {loading ? (
-                        <span>Processing Inquiry...</span>
+                        <span>Submitting to WhatsApp...</span>
                       ) : (
                         <>
-                          <span>Send Inquiry</span>
-                          <Send className="w-4 h-4" />
+                          <MessageSquare className="w-4 h-4 fill-slate-950 text-slate-950" />
+                          <span>Submit Through WhatsApp</span>
+                          <Send className="w-4 h-4 text-slate-950 ml-1" />
                         </>
                       )}
                     </button>

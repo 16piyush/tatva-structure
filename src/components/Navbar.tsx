@@ -5,8 +5,7 @@ import {
   Phone, 
   Mail, 
   Compass, 
-  ArrowRight,
-  MessageSquare
+  ArrowRight
 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/companyData';
 
@@ -158,17 +157,6 @@ export default function Navbar({ onOpenInquiry, onOpenBlueprint }: NavbarProps) 
 
           {/* Quick CTA and Mobile Toggle */}
           <div className="flex items-center space-x-3">
-            <a
-              href={`https://wa.me/${COMPANY_INFO.phoneRaw}?text=Hello%20Tatva%20Structura,%20I%20would%20like%20to%20discuss%20a%20structural%20engineering%20project.`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center space-x-1.5 px-3 py-2 text-xs font-bold uppercase tracking-wider rounded-sm bg-emerald-950/80 text-emerald-400 border border-emerald-600/40 hover:bg-emerald-900 transition-colors"
-              title="Chat on WhatsApp"
-            >
-              <MessageSquare className="w-3.5 h-3.5" />
-              <span>WhatsApp</span>
-            </a>
-
             <button
               onClick={() => onOpenInquiry()}
               className="relative inline-flex items-center justify-center px-5 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-sm bg-[#F27D26] text-white hover:bg-[#ff8c38] shadow-lg shadow-[#F27D26]/20 transition-all duration-200 active:scale-95 cursor-pointer"
